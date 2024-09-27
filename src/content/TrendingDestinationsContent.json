@@ -1,0 +1,45 @@
+{
+  "title": "Trending destinations",
+  "destinations": [
+    {
+      "name": "Paris",
+      "image": "paris.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "New York",
+      "image": "newyork.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "London",
+      "image": "london.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "Turkey",
+      "image": "turkey.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "Dubai",
+      "image": "dubai.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "Rome",
+      "image": "rome.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "Switzerland",
+      "image": "switzerland.png",
+      "tours": "100+ Tours"
+    },
+    {
+      "name": "Greece",
+      "image": "greece.png",
+      "tours": "100+ Tours"
+    }
+  ]
+}
