@@ -1,7 +1,6 @@
 import { lazy } from "react";
 import styles from "../Contact/Contact.module.css";
 
-const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const Contact = () => {

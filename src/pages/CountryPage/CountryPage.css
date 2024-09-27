@@ -1,0 +1,103 @@
+.country-page {
+  max-width: 1200px; /* Limit the maximum width for better readability */
+  margin: 0 auto;
+  padding: 20px;
+  color: #333; /* Use a darker text color for better contrast */
+}
+
+.country-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.country-header h1 {
+  font-size: 36px;
+  color: #1a1a1a; /* Slightly darker for emphasis */
+}
+
+.country-header p {
+  font-size: 18px;
+  color: #666; /* Softer color for description */
+}
+
+.things-to-do {
+  margin-bottom: 40px;
+}
+
+.things-to-do h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1a1a1a; /* Consistent color theme */
+}
+
+.activities {
+  display: grid; /* Use grid layout for a more modern feel */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+  gap: 20px;
+}
+
+.activity {
+  background: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.activity:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.activity img {
+  width: 100%;
+  height: auto;
+}
+
+.activity h3 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.activity p {
+  padding: 0 10px 10px;
+  color: #555; /* Slightly softer text color */
+}
+
+.business-class-deals {
+  margin-top: 40px;
+}
+
+.business-class-deals h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1a1a1a; /* Consistent color theme */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff; /* Highlight header */
+  color: white; /* White text for contrast */
+}
+
+td {
+  background-color: #f9f9f9; /* Light background for table rows */
+}
+
+td a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

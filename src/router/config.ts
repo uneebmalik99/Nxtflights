@@ -12,6 +12,10 @@ const routes = [
     path: ["/about"],
     component: "About",
   },
+  {
+    path: "/country/:location",
+    component: "CountryPage",
+  },
 ];
 
 export default routes;
