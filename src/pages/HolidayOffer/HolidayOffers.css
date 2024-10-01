@@ -1,0 +1,84 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 100px;
+}
+
+.select-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.custom-select {
+  appearance: none;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px 10px 20px;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 50px;
+}
+
+.ant-select-arrow {
+  color: black;
+}
+
+.intro {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.intro h2 {
+  font-size: 40px;
+  color: #333;
+}
+
+.intro p {
+  font-size: 16px;
+  color: #666;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.offer-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.offer-card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.offer-card h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.offer-card p {
+  font-size: 14px;
+}

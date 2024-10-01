@@ -5,7 +5,7 @@ import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons"; //
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   HeaderSection,
   LogoContainer,
@@ -34,6 +34,12 @@ const Header = ({ t }: { t: TFunction }) => {
     setVisibility(false);
   };
 
+  const history = useHistory();
+
+  const handleNavigate = (path: string) => {
+    history.push(path);
+  };
+
   const destinationsMenu = (
     <AntMenu>
       <AntMenu.Item onClick={() => scrollTo("destination1")}>
@@ -60,22 +66,22 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const holidayOffersMenu = (
     <AntMenu>
-      <AntMenu.Item onClick={() => scrollTo("offer1")}>
-        {t("Holiday Offer 1")}
+      <AntMenu.Item onClick={() => handleNavigate("/holiday-offer")}>
+        {t("Holiday Offer")}
       </AntMenu.Item>
       <AntMenu.SubMenu title={t("Holiday Offer 2")}>
-        <AntMenu.Item onClick={() => scrollTo("offer2-1")}>
+        <AntMenu.Item onClick={() => handleNavigate("offer2-1")}>
           {t("Holiday Offer 2-1")}
         </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("offer2-2")}>
+        <AntMenu.Item onClick={() => handleNavigate("offer2-2")}>
           {t("Holiday Offer 2-2")}
         </AntMenu.Item>
       </AntMenu.SubMenu>
       <AntMenu.SubMenu title={t("Holiday Offer 3")}>
-        <AntMenu.Item onClick={() => scrollTo("offer3-1")}>
+        <AntMenu.Item onClick={() => handleNavigate("offer3-1")}>
           {t("Holiday Offer 3-1")}
         </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("offer3-2")}>
+        <AntMenu.Item onClick={() => handleNavigate("offer3-2")}>
           {t("Holiday Offer 3-2")}
         </AntMenu.Item>
       </AntMenu.SubMenu>

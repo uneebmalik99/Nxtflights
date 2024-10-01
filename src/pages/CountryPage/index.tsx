@@ -4,6 +4,20 @@ import contentData from "../../content/CountriesContent.json";
 import { Col, Row } from "antd";
 import Container from "../../common/Container";
 
+import { Table } from "antd";
+
+const dataSource = [
+  { key: "1", city: "Abu Dhabi", price: "from $1000", detail: "More" },
+  { key: "2", city: "Abu Dhabi", price: "from $1000", detail: "More" },
+  // Add more rows as needed
+];
+
+const columns = [
+  { title: "City", dataIndex: "city", key: "city" },
+  { title: "Price", dataIndex: "price", key: "price" },
+  { title: "Detail", dataIndex: "detail", key: "detail" },
+];
+
 interface Content {
   title: string;
   description: string;
@@ -40,13 +54,20 @@ function CountryPage() {
 
   return (
     <>
+      <div
+        style={{
+          backgroundImage: "url(/../../assets/dubai.png)",
+          height: "400px",
+          backgroundSize: "cover",
+          position: "relative",
+        }}
+      ></div>
       <Container>
-        <Row>
+        <Row gutter={16}>
           <Col span={15}>
             <h4 style={{ fontSize: "40px" }}>{content.title}</h4>
             <p style={{ fontSize: "15px" }}>{content.description}</p>
             <h4 style={{ fontSize: "40px" }}>{content.things_to_do}</h4>
-            {/* Loop through images and display them */}
             <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
               {Object.values(content.images).map((image, index) => (
                 <img
@@ -64,6 +85,19 @@ function CountryPage() {
           </Col>
           <Col span={9}>
             <h6 style={{ fontSize: "24px" }}>Business Class Deals</h6>
+            <div
+              style={{
+                padding: "20px",
+                backgroundColor: "#fff",
+                borderRadius: "8px",
+              }}
+            >
+              <Table
+                dataSource={dataSource}
+                columns={columns}
+                pagination={false}
+              />
+            </div>
           </Col>
         </Row>
       </Container>
