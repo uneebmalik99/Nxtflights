@@ -1,6 +1,6 @@
-import { Button, Col, Row, Select } from "antd";
+import { Button, Col, Row } from "antd";
+import { useHistory } from "react-router-dom";
 import "./HolidayOffers.css";
-const { Option } = Select;
 
 const HolidayOffers = () => {
   const destinations = [
@@ -11,6 +11,8 @@ const HolidayOffers = () => {
     "Singapore",
     "Switzerland",
   ];
+
+  const history = useHistory();
 
   return (
     <>
@@ -52,11 +54,11 @@ const HolidayOffers = () => {
             </select>
           </div>
 
-          <div className="filter-item">
-            <label>Price</label>
+          <div className="filter-item sort">
+            <label>Sort</label>
             <select>
-              <option value="high-low">High to low</option>
-              <option value="low-high">Low to High</option>
+              <option value="high-low">Price High to Low</option>
+              <option value="low-high">Price Low to High</option>
             </select>
           </div>
 
@@ -117,7 +119,15 @@ const HolidayOffers = () => {
                       padding: "20px",
                     }}
                   >
-                    <Button type="default" variant="outlined" shape="round">
+                    <Button
+                      type="default"
+                      variant="outlined"
+                      shape="round"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        history.push(`/offer-detail/${destination}`);
+                      }}
+                    >
                       View
                     </Button>
                   </div>
@@ -127,6 +137,7 @@ const HolidayOffers = () => {
           ))}
         </Row>
       </main>
+
       <div
         style={{
           display: "flex",

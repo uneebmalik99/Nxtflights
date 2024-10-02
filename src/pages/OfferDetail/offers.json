@@ -1,0 +1,35 @@
+{
+  "Dubai": {
+    "description": "5 nights stay (including return ticket)",
+    "imageUrl": "../../assets/dubai-image.png",
+    "details": [
+      "Luxurious accommodation at a 5-star hotel",
+      "Return flights from your nearest airport",
+      "Daily breakfast included",
+      "Access to hotel amenities and facilities",
+      "Optional desert safari and city tour available"
+    ]
+  },
+  "Singapore": {
+    "description": "7 night 6 days trip to Singapore",
+    "imageUrl": "../../assets/singapore-image.png",
+    "details": [
+      "Comfortable stay in a centrally located hotel",
+      "Round-trip airfare",
+      "Daily breakfast",
+      "Visits to Gardens by the Bay, Marina Bay Sands, Sentosa Island",
+      "Opportunity to explore local markets and cuisine"
+    ]
+  },
+  "Switzerland": {
+    "description": "5 nights stay (including return ticket)",
+    "imageUrl": "../../assets/switzerland-image.png",
+    "details": [
+      "Cozy accommodation in a charming Swiss chalet",
+      "Scenic train rides through the Alps",
+      "Visits to iconic landmarks like the Matterhorn and Jungfraujoch",
+      "Opportunities for hiking, skiing, and other outdoor activities",
+      "Indulge in delicious Swiss chocolate and cheese"
+    ]
+  }
+}

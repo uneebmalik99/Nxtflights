@@ -17,7 +17,11 @@ const routes = [
     component: "HolidayOffer",
   },
   {
-    path: "/country/:location",
+    path: ["/offer-detail/:destination"],
+    component: "OfferDetail",
+  },
+  {
+    path: ["/country/:location"],
     component: "CountryPage",
   },
 ];
