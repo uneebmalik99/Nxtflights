@@ -15,7 +15,7 @@ const HolidayOffers = () => {
   return (
     <>
       <div className="holidayOfferContainer">
-        <h1 className="pageName">Holiday Offer</h1>
+        <h1 className="pageName">Holiday Offers</h1>
       </div>
       <div
         style={{
