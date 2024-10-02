@@ -1,4 +1,80 @@
-.filters {
+.holidayOfferContainer {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../../../public/assets/HolidayOffer.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.pageName {
+  position: absolute;
+  left: 12%;
+  padding: 20px;
+  color: white;
+  font-size: 3rem;
+}
+
+.filter-container {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.duration {
+  width: 250px;
+}
+
+.filter-item label {
+  font-size: 12px;
+  color: gray;
+}
+
+.filter-item select {
+  border: none;
+  background: transparent;
+  font-size: 17px;
+  font-weight: bold;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.filter-item:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button {
+  background-color: #4267b2;
+  color: white;
+  width: 100px;
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.filter-button:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .filters {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -33,6 +109,26 @@ label {
 
 .ant-select-arrow {
   color: black;
+} */
+
+.ant-col {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  margin-bottom: 60px;
+}
+
+.ant-btn {
+  color: #4062bb;
+  border: 1px solid #4062bb;
+}
+.ant-btn:hover {
+  color: #4062bb;
+  border: 1px solid #4062bb;
+}
+
+.ant-btn-round {
+  height: 50px;
+  width: 100px;
 }
 
 .intro {
@@ -41,6 +137,9 @@ label {
   margin-bottom: 40px;
   padding-left: 50px;
   padding-right: 50px;
+  background-image: url("../../../public/assets/bg_2.png");
+  background-position: calc(100% + 10px) calc(100% + 10px);
+  background-repeat: no-repeat;
 }
 
 .intro h2 {
@@ -59,14 +158,13 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 50px 50px 0px 50px;
 }
 
 .offer-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
 .offer-card img {

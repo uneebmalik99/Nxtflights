@@ -14,8 +14,8 @@ const HolidayOffers = () => {
 
   return (
     <>
-      <div>
-        <img src="../../assets/HolidayOffer.png" />
+      <div className="holidayOfferContainer">
+        <h1 className="pageName">Holiday Offers</h1>
       </div>
       <div
         style={{
@@ -23,67 +23,45 @@ const HolidayOffers = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          padding: "50px 50px",
         }}
       >
-        <section className="filters">
-          <div style={{ display: "flex", gap: "20px" }}>
-            <div className="select-container">
-              <Select
-                defaultValue="Where to?"
-                style={{
-                  width: 200,
-                }}
-              >
-                <Option value="Dubai">Dubai</Option>
-                <Option value="Singapore">Singapore</Option>
-                <Option value="Switzerland">Switzerland</Option>
-              </Select>
-            </div>
-            <div className="select-container">
-              <Select
-                defaultValue="Duration"
-                style={{
-                  width: 200,
-                }}
-              >
-                <Option value="0 Nights - 7 Nights">0 Nights - 7 Nights</Option>
-              </Select>
-            </div>
-            <div className="select-container">
-              <Select
-                defaultValue="Price"
-                style={{
-                  width: 200,
-                }}
-              >
-                <Option value="1000$ - 2000$">1000$ - 2000$</Option>
-              </Select>
-            </div>
-            <div className="select-container">
-              <Select
-                defaultValue="Sort Price"
-                style={{
-                  width: 200,
-                }}
-              >
-                <Option value="High to low">High to low</Option>
-              </Select>
-            </div>
-            <Button
-              type="default"
-              variant="outlined"
-              shape="round"
-              style={{
-                backgroundColor: "#4062BB",
-                border: "1.5px solid white",
-                color: "white",
-                width: 100,
-              }}
-            >
-              Filter
-            </Button>
+        <div className="filter-container">
+          <div className="filter-item">
+            <label>Where to?</label>
+            <select>
+              <option value="Dubai">Dubai</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Switzerland">Switzerland</option>
+            </select>
           </div>
-        </section>
+
+          <div className="filter-item duration">
+            <label>Duration</label>
+            <select>
+              <option value="0-7">0 Nights - 7 Nights</option>
+              <option value="8-14">8 Nights - 14 Nights</option>
+            </select>
+          </div>
+
+          <div className="filter-item">
+            <label>Price</label>
+            <select>
+              <option value="1000-2000">1000$ - 2000$</option>
+              <option value="2001-3000">2001$ - 3000$</option>
+            </select>
+          </div>
+
+          <div className="filter-item">
+            <label>Price</label>
+            <select>
+              <option value="high-low">High to low</option>
+              <option value="low-high">Low to High</option>
+            </select>
+          </div>
+
+          <button className="filter-button">Filter</button>
+        </div>
       </div>
 
       <div className="intro">
@@ -136,6 +114,7 @@ const HolidayOffers = () => {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
+                      padding: "20px",
                     }}
                   >
                     <Button type="default" variant="outlined" shape="round">
@@ -148,6 +127,27 @@ const HolidayOffers = () => {
           ))}
         </Row>
       </main>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "0px 0px 100px 0px",
+        }}
+      >
+        <Button
+          type="default"
+          style={{
+            color: "#696A75",
+            borderColor: "rgb(216 215 223)",
+            height: "45px",
+            width: "150px",
+            borderRadius: "8px",
+          }}
+        >
+          View All Posts
+        </Button>
+      </div>
     </>
   );
 };
