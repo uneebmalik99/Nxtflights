@@ -152,7 +152,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                   marginTop: "50%",
                 }}
               >
-                <img src="../../../assets/certificate.png" width={300} />
+                <img src="../../../assets/certificate.png" width={300} alt="certificate" />
               </div>
               <p
                 style={{

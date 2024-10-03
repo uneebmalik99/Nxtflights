@@ -73,7 +73,7 @@ function CountryPage() {
                 <img
                   key={index}
                   src={image}
-                  alt={`Image ${index + 1}`}
+                  alt={`${index + 1}`}
                   style={{
                     width: "100%",
                     maxWidth: "300px",
