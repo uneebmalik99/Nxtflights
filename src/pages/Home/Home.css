@@ -1,0 +1,29 @@
+.homePageBg {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../../../public/assets/homepage_bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 0;
+}
+
+.pageName {
+  position: absolute;
+  left: 5%;
+  padding: 20px;
+  color: black;
+  font-size: 3rem;
+}
+
+.pagePara {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+  padding: 20px;
+  color: black;
+  font-size: 1rem;
+}
