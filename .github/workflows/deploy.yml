@@ -28,5 +28,5 @@ jobs:
           server: 92.205.175.101
           username: ${{ secrets.GIT_CPANEL_REACT_USER }}
           password: ${{ secrets.GIT_CPANEL_REACT_PWD }}
-          protocol: sftp
+          protocol: ftps
           local-dir: ./build/
