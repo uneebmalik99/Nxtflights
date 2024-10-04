@@ -50,11 +50,15 @@
   padding: 5% !important;
 }
 
-.ant-btn-round {
+#get-price {
   height: 50px;
   width: 120px;
   background-color: #4062bb;
   color: #fff;
+}
+
+#get-price:hover {
+  outline: none !important;
 }
 
 ul li::marker {

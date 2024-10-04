@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TrendingDestinationsSection = styled("section")`
   text-align: left;
-  padding: 40px 0;
+  padding: 40px 0px 0px 0px;
 
   @media screen and (max-width: 1024px) {
     padding: 30px 0;
@@ -46,4 +46,6 @@ export const DestinationDescription = styled("p")`
 export const BackgroundImage = styled("img")`
   width: 100%;
   height: auto;
+  object-fit: cover;
+  margin-top: -150px;
 `

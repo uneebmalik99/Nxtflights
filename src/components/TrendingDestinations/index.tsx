@@ -32,7 +32,7 @@ const TrendingDestinations = ({ direction }: TrendingDestinationsProps) => {
             )
           )}
         </DestinationsContainer>
-        <BackgroundImage src={"../../assets/bg.png"} alt="Background" />
+        <BackgroundImage src={"../../assets/plane_bg.png"} alt="Background" />
       </TrendingDestinationsSection>
     </Fade>
   );

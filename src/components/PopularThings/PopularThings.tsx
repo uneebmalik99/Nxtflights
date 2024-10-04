@@ -1,8 +1,9 @@
 import React from "react";
 import "../PopularThings/PopularThings.css";
 import { Row, Col } from "antd";
+import { PopularThingsProps } from "./types";
 
-const PopularThings: React.FC = () => {
+function PopularThings({ direction }: PopularThingsProps) {
   return (
     <>
       <h2>Popular things to do</h2>
@@ -30,6 +31,6 @@ const PopularThings: React.FC = () => {
       </Row>
     </>
   );
-};
+}
 
 export default PopularThings;

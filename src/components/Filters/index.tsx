@@ -121,7 +121,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                       marginTop: 15,
                     }}
                   >
-                    <Button type="default" shape="round">
+                    <Button type="default" shape="round" id="get-price">
                       Get Price
                     </Button>
                   </div>

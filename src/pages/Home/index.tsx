@@ -13,30 +13,26 @@ import DailyBlogs from "../../components/DailyBlogs";
 import PopularThings from "../../components/PopularThings/PopularThings";
 import FlightBookingForm from "../../components/Filters";
 import "./Home.css";
-import PerfectScrollbar from "react-perfect-scrollbar";
-import "react-perfect-scrollbar/dist/css/styles.css";
+import HappeningCities from "../../components/HappeningCities";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+// const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
   return (
-    <PerfectScrollbar>
-      <>
-        <div className="homePageBg">
-          <h1 className="pageName">
-            Your Ticket To <br /> Explore The World
-          </h1>
-          <p className="pagePara">
-            Best Flights at cheap rates at your service
-          </p>
-        </div>
-        <Container>
-          <ScrollToTop />
-          {/* <ContentBlock
+    <>
+      <div className="homePageBg">
+        <h1 className="homePageHeading">
+          Your Ticket To <br /> Explore The World
+        </h1>
+        <p className="pagePara">Best Flights at cheap rates at your service</p>
+      </div>
+      <Container>
+        <ScrollToTop />
+        {/* <ContentBlock
           direction="right"
           title={IntroContent.title}
           content={IntroContent.text}
@@ -44,44 +40,44 @@ const Home = () => {
           icon="developer.svg"
           id="intro"
         /> */}
-          <FlightBookingForm direction="left" />
-          <TrendingDestinations direction="right" />
-          <AboutUs direction="left" />
-        </Container>
-        <SpecialOffers direction="right" />
-        <Container>
-          <BookingSimple direction="left" />
-        </Container>
-        <DailyBlogs direction="right" />
-        <Container>
-          <PopularThings />
-          <MiddleBlock
-            title={MiddleBlockContent.title}
-            content={MiddleBlockContent.text}
-            button={MiddleBlockContent.button}
-          />
-          <ContentBlock
-            direction="right"
-            title={MissionContent.title}
-            content={MissionContent.text}
-            icon="product-launch.svg"
-            id="mission"
-          />
-          <ContentBlock
-            direction="left"
-            title={ProductContent.title}
-            content={ProductContent.text}
-            icon="waving.svg"
-            id="product"
-          />
-          <Contact
-            title={ContactContent.title}
-            content={ContactContent.text}
-            id="contact"
-          />
-        </Container>
-      </>
-    </PerfectScrollbar>
+        <FlightBookingForm direction="left" />
+        <TrendingDestinations direction="right" />
+        <AboutUs direction="left" />
+      </Container>
+      <SpecialOffers direction="right" />
+      <Container>
+        <BookingSimple direction="left" />
+      </Container>
+      <DailyBlogs direction="right" />
+      <Container>
+        <PopularThings direction="left" />
+        <HappeningCities direction="right" />
+        {/* <MiddleBlock
+          title={MiddleBlockContent.title}
+          content={MiddleBlockContent.text}
+          button={MiddleBlockContent.button}
+        />
+        <ContentBlock
+          direction="right"
+          title={MissionContent.title}
+          content={MissionContent.text}
+          icon="product-launch.svg"
+          id="mission"
+        />
+        <ContentBlock
+          direction="left"
+          title={ProductContent.title}
+          content={ProductContent.text}
+          icon="waving.svg"
+          id="product"
+        /> */}
+        <Contact
+          title={ContactContent.title}
+          content={ContactContent.text}
+          id="contact"
+        />
+      </Container>
+    </>
   );
 };
 
