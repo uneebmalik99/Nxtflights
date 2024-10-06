@@ -5,7 +5,6 @@ import { SpecialOffersProps } from "./types";
 import { Carousel } from "antd";
 
 const contentStyle: React.CSSProperties = {
-  margin: 0,
   height: "500px",
   color: "#fff",
   lineHeight: "160px",
@@ -13,7 +12,7 @@ const contentStyle: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  background: "#364d79",
+  background: "#4062BB",
   borderRadius: "15px",
 };
 
@@ -21,8 +20,10 @@ const SpecialOffers = ({ direction }: SpecialOffersProps) => {
   return (
     <Fade direction={direction} triggerOnce>
       <SpecialOffersSection>
-        <h2 style={{ color: "#000;" }}>{SpecialOffersContent.title}</h2>
-        <Carousel arrows>
+        <h2 style={{ color: "#333", fontSize: "40px", marginBottom: "40px" }}>
+          {SpecialOffersContent.title}
+        </h2>
+        <Carousel style={{ marginTop: "20px" }}>
           <div>
             <h3 style={contentStyle}>1</h3>
           </div>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AboutUsSection = styled("section")`
   text-align: left;
-  padding: 40px 0;
+  padding: 80px 80px;
 
   @media screen and (max-width: 1024px) {
     padding: 30px 0;

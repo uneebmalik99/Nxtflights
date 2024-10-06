@@ -1,9 +1,4 @@
 import { lazy } from "react";
-// import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-// import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import TrendingDestinations from "../../components/TrendingDestinations";
 import AboutUs from "../../components/AboutUs";
@@ -14,12 +9,14 @@ import PopularThings from "../../components/PopularThings/PopularThings";
 import FlightBookingForm from "../../components/Filters";
 import "./Home.css";
 import HappeningCities from "../../components/HappeningCities";
+import HowItWorks from "../../components/HowItWorks";
+import PhotoGallery from "../../components/PhotoGallery";
+import ClientsReview from "../../components/ClientsReview";
+import CertificateBanner from "../../components/CertificateBanner";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
-// const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-// const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 
 const Home = () => {
   return (
@@ -32,14 +29,6 @@ const Home = () => {
       </div>
       <Container>
         <ScrollToTop />
-        {/* <ContentBlock
-          direction="right"
-          title={IntroContent.title}
-          content={IntroContent.text}
-          button={IntroContent.button}
-          icon="developer.svg"
-          id="intro"
-        /> */}
         <FlightBookingForm direction="left" />
         <TrendingDestinations direction="right" />
         <AboutUs direction="left" />
@@ -52,31 +41,16 @@ const Home = () => {
       <Container>
         <PopularThings direction="left" />
         <HappeningCities direction="right" />
-        {/* <MiddleBlock
-          title={MiddleBlockContent.title}
-          content={MiddleBlockContent.text}
-          button={MiddleBlockContent.button}
-        />
-        <ContentBlock
-          direction="right"
-          title={MissionContent.title}
-          content={MissionContent.text}
-          icon="product-launch.svg"
-          id="mission"
-        />
-        <ContentBlock
-          direction="left"
-          title={ProductContent.title}
-          content={ProductContent.text}
-          icon="waving.svg"
-          id="product"
-        /> */}
-        <Contact
+        <HowItWorks direction="left" />
+        <PhotoGallery direction="right" />
+        <ClientsReview direction="left" />
+        {/* <Contact
           title={ContactContent.title}
           content={ContactContent.text}
           id="contact"
-        />
+          /> */}
       </Container>
+      <CertificateBanner direction="right" />
     </>
   );
 };

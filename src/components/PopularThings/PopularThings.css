@@ -1,0 +1,10 @@
+.PopularThingSection {
+    margin-top: 100px;
+    padding: 50px;
+}
+
+#popular_h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 40px;
+}

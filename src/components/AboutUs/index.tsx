@@ -11,7 +11,7 @@ const AboutUs = ({ direction }: AboutUsProps) => {
   return (
     <Fade direction={direction} triggerOnce>
       <AboutUsSection>
-        <h2 style={{ color: "#000;" }}>{AboutUsContent.title}</h2>
+        <h2 style={{ color: "#333", fontSize: "40px" }}>{AboutUsContent.title}</h2>
         <AboutUsContainer>
           <AboutTitle>{AboutUsContent.description}</AboutTitle>
         </AboutUsContainer>

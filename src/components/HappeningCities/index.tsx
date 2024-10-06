@@ -74,7 +74,7 @@ function HappeningCities({ direction }: HappeningCitiesProps) {
                 padding: 4,
                 textAlign: "center",
                 color: `${benefit.fontColor}`,
-                marginBottom: 15
+                marginBottom: 15,
               }}
             >
               {benefit.tag}

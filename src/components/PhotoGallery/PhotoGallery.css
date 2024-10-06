@@ -1,0 +1,9 @@
+.custom-photo {
+  padding: 8px;
+  object-fit: cover;
+}
+
+#photo_h1 {
+  color: #333;
+  font-size: 40px;
+}

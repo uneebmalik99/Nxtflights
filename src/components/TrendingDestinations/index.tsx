@@ -15,7 +15,7 @@ const TrendingDestinations = ({ direction }: TrendingDestinationsProps) => {
   return (
     <Fade direction={direction} triggerOnce>
       <TrendingDestinationsSection>
-        <h2 style={{ color: "#000;" }}>{TrendingDestinationsContent.title}</h2>
+        <h2 style={{ color: "#333", fontSize: "40px", paddingLeft: "70px" }}>{TrendingDestinationsContent.title}</h2>
         <DestinationsContainer>
           {TrendingDestinationsContent.destinations.map(
             (destination, index) => (

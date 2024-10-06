@@ -1,6 +1,10 @@
 import { Fade } from "react-awesome-reveal";
 import BookingSimpleContent from "../../content/BookingSimple.json";
-import { BookingSimpleSection, BookingSimpleSubTitle, BookingSimpleTitle } from "../BookingSimple/styles";
+import {
+  BookingSimpleSection,
+  BookingSimpleSubTitle,
+  BookingSimpleTitle,
+} from "../BookingSimple/styles";
 import { BookingSimpleProps } from "./types";
 
 const BookingSimple = ({ direction }: BookingSimpleProps) => {
@@ -8,7 +12,7 @@ const BookingSimple = ({ direction }: BookingSimpleProps) => {
     <Fade direction={direction} triggerOnce>
       <BookingSimpleSection>
         <BookingSimpleTitle>{BookingSimpleContent.title}</BookingSimpleTitle>
-        <p>
+        <p style={{ fontSize: 15, color: "#333", fontWeight: "normal" }}>
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
           fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus
@@ -22,8 +26,10 @@ const BookingSimple = ({ direction }: BookingSimpleProps) => {
           tempor urna. Curabitur vel bibendum lorem. Morbi convallis convallis
           diam sit amet lacinia. Aliquam in elementum tellu
         </p>
-        <BookingSimpleSubTitle>{BookingSimpleContent.title}</BookingSimpleSubTitle>
-        <p>
+        <BookingSimpleSubTitle>
+          {BookingSimpleContent.title}
+        </BookingSimpleSubTitle>
+        <p style={{ fontSize: 15, color: "#333", fontWeight: "normal" }}>
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
           fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus

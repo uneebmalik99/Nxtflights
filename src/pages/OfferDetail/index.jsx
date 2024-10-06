@@ -43,6 +43,8 @@ const OfferDetail = () => {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
 
+  console.log(destination);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -99,10 +101,10 @@ const OfferDetail = () => {
             </div>
           </Slider>
         </div>
-        <div class="container">
-          <div class="card special-offer">
-            <div class="header">Special Offer</div>
-            <div class="content">
+        <div className="container">
+          <div className="card special-offer">
+            <div className="header">Special Offer</div>
+            <div className="content">
               <p>
                 Upgrade to Fountain View <br />
                 Suite from extra <strong>$2000</strong>
@@ -118,17 +120,16 @@ const OfferDetail = () => {
                 <br />
                 6th Jan 2025 – 31st Mar 2025
               </p>
-              <button class="get-price">Get Price</button>
+              <button className="get-price">Get Price</button>
             </div>
           </div>
-
-          <div class="card special-offer">
-            <div class="header">Other Offers</div>
-            <div class="content">
+          <div className="card special-offer">
+            <div className="header">Other Offers</div>
+            <div className="content">
               <p>
                 Call us for alternative dates, duration <br /> or board basis.
               </p>
-              <div class="phone-icon">
+              <div className="phone-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -139,7 +140,7 @@ const OfferDetail = () => {
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
               </div>
-              <p class="phone-number">+91 111 222 333</p>
+              <p className="phone-number">+91 111 222 333</p>
             </div>
           </div>
         </div>
