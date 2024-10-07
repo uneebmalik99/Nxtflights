@@ -27,3 +27,38 @@
   color: black;
   font-size: 1rem;
 }
+
+/* For small screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+  .homePageHeading {
+    font-size: 2rem;
+    left: 10%;
+  }
+
+  .pagePara {
+    font-size: 0.8rem;
+    top: 70%;
+    left: 10%;
+  }
+}
+
+/* For even smaller screens (e.g., smaller mobile devices) */
+@media only screen and (max-width: 480px) {
+  .homePageHeading {
+    font-size: 1.5rem;
+    top: 19%;
+  }
+
+  .pagePara {
+    font-size: 0.6rem;
+    top: 30%;
+  }
+}
+
+/* For even smaller screens (e.g., smaller mobile devices) */
+@media only screen and (max-width: 320px) {
+  .pagePara {
+    font-size: 0.6rem;
+    top: 35%;
+  }
+}

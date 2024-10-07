@@ -64,3 +64,188 @@
 ul li::marker {
   font-size: 10px;
 }
+
+.filtersCard {
+  width: 1200px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 16px 15px 15px;
+  border-radius: 13px 38px 13px 38px;
+  margin-bottom: 100px;
+  margin-top: -50px;
+}
+
+.leftHeading {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.responsive-col {
+  border-right: 5px dashed gray;
+}
+
+.leftChildCol {
+  height: 400px;
+  padding-block: 10px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.getPriceDiv {
+  display: flex;
+  justify-content: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+/* For small screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+  .filtersCard {
+    width: 100%;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .leftHeading {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .filterParentRow {
+    flex-direction: column;
+  }
+
+  .responsive-col {
+    flex: 1;
+    max-width: 100%;
+    border-bottom: 5px dashed gray;
+    border-right: none;
+  }
+
+  .leftChildRow {
+    flex-direction: column;
+  }
+
+  .leftChildCol {
+    max-width: 100%;
+    padding: 0px;
+  }
+
+  .inputDiv {
+    margin-bottom: 10px;
+  }
+
+  .getPriceDiv {
+    margin-bottom: 20px;
+  }
+
+  #rightCol {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .filtersCard {
+    width: 100%;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .leftHeading {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .filterParentRow {
+    flex-direction: column;
+  }
+
+  .responsive-col {
+    flex: 1;
+    max-width: 100%;
+    border-bottom: 5px dashed gray;
+    border-right: none;
+  }
+
+  .leftChildRow {
+    flex-direction: column;
+  }
+
+  .leftChildCol {
+    max-width: 100%;
+    padding: 0px;
+  }
+
+  .inputDiv {
+    margin-bottom: 10px;
+  }
+
+  .getPriceDiv {
+    margin-bottom: 20px;
+  }
+
+  #rightCol {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .filtersCard {
+    width: 100%;
+  }
+
+  .formContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .leftHeading {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .filterParentRow {
+    flex-direction: column;
+  }
+
+  .responsive-col {
+    flex: 1;
+    max-width: 100%;
+    border-bottom: 5px dashed gray;
+    border-right: none;
+  }
+
+  .leftChildRow {
+    flex-direction: column;
+  }
+
+  .leftChildCol {
+    max-width: 100%;
+    padding: 0px;
+  }
+
+  .inputDiv {
+    margin-bottom: 10px;
+  }
+
+  .getPriceDiv {
+    margin-bottom: 20px;
+  }
+
+  #rightCol {
+    max-width: 100%;
+  }
+}

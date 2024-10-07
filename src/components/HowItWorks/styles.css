@@ -17,6 +17,22 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0px;
+  }
+}
+
 .custom-card {
   border-radius: 20px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;

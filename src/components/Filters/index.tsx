@@ -7,47 +7,14 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
   return (
     <div className="formContainer">
       <Fade direction={direction} triggerOnce>
-        <Card
-          style={{
-            width: 1200,
-            boxShadow: "rgba(0, 0, 0, 0.1) 0px 16px 15px 15px",
-            borderRadius: "13px 38px 13px 38px",
-            marginBottom: "100px",
-          }}
-        >
-          <Row>
-            <Col
-              span={16}
-              style={{
-                //   backgroundColor: "red",
-                borderRight: "5px dashed gray",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  fontSize: 24,
-                  color: "black",
-                  fontWeight: "bold",
-                  marginBottom: 10,
-                }}
-              >
+        <Card className="filtersCard" style={{}}>
+          <Row className="filterParentRow">
+            <Col className="responsive-col" span={16}>
+              <div className="leftHeading">
                 Get Amazing First and Business Class Flight Deals
               </div>
-              <Row>
-                <Col
-                  span={12}
-                  style={{
-                    // backgroundColor: "gray",
-                    height: "400px",
-                    paddingBlock: 10,
-                    paddingInline: 20,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                  }}
-                >
+              <Row className="leftChildRow">
+                <Col span={12} className="leftChildCol">
                   <div className="inputDiv">
                     <label>Depart from</label>
                     <input type="text" value="John Doe" />
@@ -72,18 +39,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                     <input type="text" placeholder="Phone" id="phone" />
                   </div>
                 </Col>
-                <Col
-                  span={12}
-                  style={{
-                    // backgroundColor: "gray",
-                    height: "400px",
-                    paddingBlock: 10,
-                    paddingInline: 20,
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                  }}
-                >
+                <Col span={12} className="leftChildCol">
                   <div className="inputDiv">
                     <label>Arrive at</label>
                     <input type="text" value="John Doe" />
@@ -113,14 +69,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                   </div>
                 </Col>
                 <Col span={24}>
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "right",
-                      marginRight: 15,
-                      marginTop: 15,
-                    }}
-                  >
+                  <div className="getPriceDiv">
                     <Button type="default" shape="round" id="get-price">
                       Get Price
                     </Button>
@@ -131,10 +80,10 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
             <Col
               span={8}
               style={{
-                // backgroundColor: "blue",
                 paddingBlock: 20,
                 paddingInline: 35,
               }}
+              id="rightCol"
             >
               <p style={{ fontWeight: "bold" }}>Why Work with Us?</p>
               <ul style={{ fontSize: 20 }}>
@@ -152,7 +101,11 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                   marginTop: "50%",
                 }}
               >
-                <img src="../../../assets/certificate.png" width={300} alt="certificate" />
+                <img
+                  src="../../../assets/certificate.png"
+                  width={300}
+                  alt="certificate"
+                />
               </div>
               <p
                 style={{

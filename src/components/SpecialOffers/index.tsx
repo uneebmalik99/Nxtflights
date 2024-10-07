@@ -1,6 +1,9 @@
 import { Fade } from "react-awesome-reveal";
 import SpecialOffersContent from "../../content/SpecialOffers.json";
-import { SpecialOffersSection } from "../SpecialOffers/styles";
+import {
+  SpecialOffersHeading,
+  SpecialOffersSection,
+} from "../SpecialOffers/styles";
 import { SpecialOffersProps } from "./types";
 import { Carousel } from "antd";
 
@@ -20,9 +23,9 @@ const SpecialOffers = ({ direction }: SpecialOffersProps) => {
   return (
     <Fade direction={direction} triggerOnce>
       <SpecialOffersSection>
-        <h2 style={{ color: "#333", fontSize: "40px", marginBottom: "40px" }}>
+        <SpecialOffersHeading>
           {SpecialOffersContent.title}
-        </h2>
+        </SpecialOffersHeading>
         <Carousel style={{ marginTop: "20px" }}>
           <div>
             <h3 style={contentStyle}>1</h3>

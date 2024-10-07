@@ -9,6 +9,25 @@ export const TrendingDestinationsSection = styled("section")`
   }
 `;
 
+export const TrendingDestinationsHeading = styled("h2")`
+  color: #333;
+  font-size: 40px;
+  padding-left: 70px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    padding-left: 0px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 30px;
+    padding-left: 0px;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 30px;
+    padding-left: 0px;
+  }
+`;
+
 export const DestinationsContainer = styled("div")`
   display: flex;
   justify-content: center;
@@ -49,4 +68,4 @@ export const BackgroundImage = styled("img")`
   object-fit: cover;
   margin-top: -150px;
   margin-bottom: -100px;
-`
+`;

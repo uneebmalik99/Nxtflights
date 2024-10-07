@@ -9,25 +9,49 @@ function PopularThings({ direction }: PopularThingsProps) {
       <div className="PopularThingSection">
         <h2 id="popular_h1">Popular things to do</h2>
         <Row>
-          <Col>
-            <img src="../../assets/cruise.png" alt="Cruising" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/cruise.png"
+              alt="Cruising"
+              className="popularThingsImgs"
+            />
           </Col>
-          <Col>
-            <img src="../../assets/beach.png" alt="Beach" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/beach.png"
+              alt="Beach"
+              className="popularThingsImgs"
+            />
           </Col>
-          <Col>
-            <img src="../../assets/citytour.png" alt="City Tour" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/citytour.png"
+              alt="City Tour"
+              className="popularThingsImgs"
+            />
           </Col>
         </Row>
         <Row>
-          <Col>
-            <img src="../../assets/museum.png" alt="Museum" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/museum.png"
+              alt="Museum"
+              className="popularThingsImgs"
+            />
           </Col>
-          <Col>
-            <img src="../../assets/hiking.png" alt="Hiking" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/hiking.png"
+              alt="Hiking"
+              className="popularThingsImgs"
+            />
           </Col>
-          <Col>
-            <img src="../../assets/food.png" alt="Food" />
+          <Col className="imgCol">
+            <img
+              src="../../assets/food.png"
+              alt="Food"
+              className="popularThingsImgs"
+            />
           </Col>
         </Row>
       </div>

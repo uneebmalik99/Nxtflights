@@ -8,6 +8,7 @@ import {
   DestinationsContainer,
   TrendingDestinationsSection,
   BackgroundImage,
+  TrendingDestinationsHeading,
 } from "../TrendingDestinations/styles";
 import { TrendingDestinationsProps } from "./types";
 
@@ -15,7 +16,9 @@ const TrendingDestinations = ({ direction }: TrendingDestinationsProps) => {
   return (
     <Fade direction={direction} triggerOnce>
       <TrendingDestinationsSection>
-        <h2 style={{ color: "#333", fontSize: "40px", paddingLeft: "70px" }}>{TrendingDestinationsContent.title}</h2>
+        <TrendingDestinationsHeading>
+          {TrendingDestinationsContent.title}
+        </TrendingDestinationsHeading>
         <DestinationsContainer>
           {TrendingDestinationsContent.destinations.map(
             (destination, index) => (

@@ -17,6 +17,16 @@ export const Heading = styled.h2`
   font-size: 40px;
   margin-bottom: 20px;
   color: #333;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (max-width: 480px) {
+    font-size: 25px;
+  }
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
 `;
 
 export const BenefitItem = styled.div`

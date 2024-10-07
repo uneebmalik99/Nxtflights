@@ -1,10 +1,68 @@
 .PopularThingSection {
-    margin-top: 100px;
-    padding: 50px;
+  margin-top: 100px;
+  padding: 50px;
 }
 
 #popular_h1 {
-    font-size: 40px;
-    color: #333;
-    margin-bottom: 40px;
+  font-size: 40px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .PopularThingSection {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  #popular_h1 {
+    font-size: 30px;
+  }
+
+  .popularThingsImgs {
+    width: 100%;
+    height: auto;
+  }
+
+  .imgCol {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .PopularThingSection {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  #popular_h1 {
+    font-size: 30px;
+  }
+
+  .popularThingsImgs {
+    width: 100%;
+    height: auto;
+  }
+
+  .imgCol {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .PopularThingSection {
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  #popular_h1 {
+    font-size: 30px;
+  }
+
+  .popularThingsImgs {
+    width: 100%;
+    height: auto;
+  }
+
+  .imgCol {
+    margin-bottom: 20px;
+  }
 }
