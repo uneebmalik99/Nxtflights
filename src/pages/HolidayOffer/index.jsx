@@ -14,9 +14,6 @@ const HolidayOffers = () => {
 
   const history = useHistory();
 
-  
-  
-
   return (
     <>
       <div className="holidayOfferContainer">
@@ -94,7 +91,7 @@ const HolidayOffers = () => {
       <main className="offers">
         <Row gutter={[16, 16]}>
           {destinations.map((destination, index) => (
-            <Col key={index} span={8}>
+            <Col className="customCol" key={index} span={8}>
               <div
                 className="offer-card"
                 style={{
@@ -126,6 +123,7 @@ const HolidayOffers = () => {
                       type="default"
                       variant="outlined"
                       shape="round"
+                      className="viewBtn"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                         history.push(`/offer-detail/${destination}`);

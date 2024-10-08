@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: rgb(241, 242, 243);
-  padding: 2.5rem 0;
+  background: #4062BB;
+  padding: 2.5rem;
 `;
 
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #fff;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -30,7 +30,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Extra = styled("section")`
-  background: rgb(241, 242, 243);
+  background: #4062BB;
   position: relative;
   width: 100%;
   margin-right: auto;
@@ -44,14 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
-  font-size: 14px;
+  color: #fff;
+  font-size: 12px;
   width: 70%;
 `;
 
 export const Large = styled(Link)`
-  font-size: 16px;
-  color: #000;
+  font-size: 14px;
+  color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
@@ -68,19 +68,6 @@ export const Large = styled(Link)`
   }
 `;
 
-export const Chat = styled("p")`
-  color: #18216d;
-  max-width: fit-content;
-  border-bottom: 1px solid #18216d;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
-  }
-`;
 
 export const Empty = styled("div")`
   position: relative;

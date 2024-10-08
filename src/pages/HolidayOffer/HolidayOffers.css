@@ -78,59 +78,22 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* .filters {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 100px;
-}
-
-.select-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.custom-select {
-  appearance: none;
-  background-color: white;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 40px 10px 20px;
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-  border-radius: 50px;
-}
-
-.ant-select-arrow {
-  color: black;
-} */
-
-.ant-col {
+.customCol {
   padding-left: 40px !important;
   padding-right: 40px !important;
   margin-bottom: 60px;
 }
 
-.ant-btn {
+.viewBtn {
   color: #4062bb;
   border: 1px solid #4062bb;
 }
-.ant-btn:hover {
+.viewBtn:hover {
   color: #4062bb;
   border: 1px solid #4062bb;
 }
 
-.ant-btn-round {
+.viewBtn {
   height: 50px;
   width: 100px;
 }

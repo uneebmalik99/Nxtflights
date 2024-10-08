@@ -16,6 +16,11 @@ const routes = [
     chunkName: "about",
   },
   {
+    path: ["/faqs"],
+    component: "Faqs",
+    chunkName: "faqs",
+  },
+  {
     path: ["/holiday-offer"],
     component: "HolidayOffer",
     chunkName: "holidayOffer",

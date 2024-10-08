@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import { DownOutlined, UpOutlined, SearchOutlined } from "@ant-design/icons"; // Import icons
+import {
+  CaretDownFilled,
+  CaretUpFilled,
+  SearchOutlined,
+} from "@ant-design/icons";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
   HeaderSection,
   LogoContainer,
@@ -16,11 +19,13 @@ import {
   Outline,
   Span,
   Menu,
+  SearchBtn,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -117,6 +122,7 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const MenuItem = () => {
+    const searchBtnVariant = location.pathname === "/" ? "home" : "other";
     return (
       <>
         <CustomNavLinkSmall as={Link} to="/">
@@ -135,9 +141,9 @@ const Header = ({ t }: { t: TFunction }) => {
             <Span>
               {t("Destinations")}{" "}
               {openDropdown === "destinations" ? (
-                <UpOutlined />
+                <CaretUpFilled />
               ) : (
-                <DownOutlined />
+                <CaretDownFilled />
               )}
             </Span>
           </CustomNavLinkSmall>
@@ -159,9 +165,9 @@ const Header = ({ t }: { t: TFunction }) => {
             <Span>
               {t("Holiday Offers")}{" "}
               {openDropdown === "holidayOffers" ? (
-                <UpOutlined />
+                <CaretUpFilled />
               ) : (
-                <DownOutlined />
+                <CaretDownFilled />
               )}
             </Span>
           </CustomNavLinkSmall>
@@ -179,9 +185,9 @@ const Header = ({ t }: { t: TFunction }) => {
             <Span>
               {t("Our Airline Partners")}{" "}
               {openDropdown === "ourAirlinePartners" ? (
-                <UpOutlined />
+                <CaretUpFilled />
               ) : (
-                <DownOutlined />
+                <CaretDownFilled />
               )}
             </Span>
           </CustomNavLinkSmall>
@@ -189,9 +195,9 @@ const Header = ({ t }: { t: TFunction }) => {
 
         <CustomNavLinkSmall style={{ width: "180px" }} as={Link} to="/">
           <Span>
-            <Button>
+            <SearchBtn variant={searchBtnVariant}>
               {t("Search")} <SearchOutlined />
-            </Button>
+            </SearchBtn>
           </Span>
         </CustomNavLinkSmall>
       </>

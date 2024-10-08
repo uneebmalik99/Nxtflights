@@ -1,5 +1,4 @@
 import { lazy } from "react";
-import ContactContent from "../../content/ContactContent.json";
 import TrendingDestinations from "../../components/TrendingDestinations";
 import AboutUs from "../../components/AboutUs";
 import SpecialOffers from "../../components/SpecialOffers";
@@ -14,7 +13,6 @@ import PhotoGallery from "../../components/PhotoGallery";
 import ClientsReview from "../../components/ClientsReview";
 import CertificateBanner from "../../components/CertificateBanner";
 
-const Contact = lazy(() => import("../../components/ContactForm"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
@@ -44,11 +42,6 @@ const Home = () => {
         <HowItWorks direction="left" />
         <PhotoGallery direction="right" />
         <ClientsReview direction="left" />
-        {/* <Contact
-          title={ContactContent.title}
-          content={ContactContent.text}
-          id="contact"
-          /> */}
       </Container>
       <CertificateBanner direction="right" />
     </>

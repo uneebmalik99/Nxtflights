@@ -1,4 +1,3 @@
-import React from "react";
 import Gallery from "react-photo-gallery";
 import "./PhotoGallery.css";
 import { PhotoGalleryProps } from "./types";
@@ -54,7 +53,7 @@ const photos = [
 // Custom renderImage function to apply class
 function renderImage(props: any) {
   const { photo } = props;
-  return <img {...photo} className="custom-photo" />;
+  return <img {...photo} className="custom-photo" alt="" />;
 }
 
 function PhotoGallery({ direction }: PhotoGalleryProps) {

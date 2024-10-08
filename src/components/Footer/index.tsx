@@ -12,7 +12,6 @@ import {
   LogoContainer,
   Para,
   Large,
-  Chat,
   Empty,
   FooterContainer,
   Language,
@@ -20,6 +19,7 @@ import {
   LanguageSwitch,
   LanguageSwitchContainer,
 } from "./styles";
+import {  FmdGoodOutlined } from "@mui/icons-material";
 
 interface SocialLinkProps {
   href: string;
@@ -27,7 +27,7 @@ interface SocialLinkProps {
 }
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0); // Scroll to the top (0,0)
+  window.scrollTo(0, 0);
 };
 
 const Footer = ({ t }: { t: TFunction }) => {
@@ -53,65 +53,33 @@ const Footer = ({ t }: { t: TFunction }) => {
     <>
       <FooterSection>
         <Container>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+          <Row justify="start">
+            <Col lg={6} md={6} sm={12} xs={12}>
+              <LogoContainer>
+                <SvgIcon
+                  src="logo.png"
+                  aria-label="homepage"
+                  width="110px"
+                  height="50px"
+                />
+              </LogoContainer>
               <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
+                Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
-              </a>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Policy")}</Title>
-              <Large to="/">{t("Application Security")}</Large>
-              <Large to="/">{t("Software Principles")}</Large>
+            <Col lg={4} md={4} sm={12} xs={12}>
+              <Title>{t("Service")}</Title>
+              <Large to="/">{t("Business Flights")}</Large>
+              <Large to="/">{t("Holiday Offers")}</Large>
+              <Large to="/">{t("Airline Partners")}</Large>
+              <Large to="/">{t("Travel Blog")}</Large>
             </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Empty />
-              <Large to="/">{t("Support Center")}</Large>
-              <Large to="/">{t("Customer Support")}</Large>
-            </Col>
-          </Row>
-          <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
-              <Empty />
-              <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large to="/about" onClick={scrollToTop}>
-                {t("About")}
-              </Large>
-              <Large to="/contact" onClick={scrollToTop}>
-                {t("Contact")}
-              </Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
-              <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
-                  <SvgIcon
-                    src="spain.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
-              </LanguageSwitchContainer>
+            <Col lg={4} md={4} sm={12} xs={12}>
+              <Title>{t("Quick Links")}</Title>
+              <Large to="/">{t("Home")}</Large>
+              <Large to="/contact">{t("Contact")}</Large>
+              <Large to="/about">{t("About Us")}</Large>
             </Col>
           </Row>
         </Container>
@@ -123,18 +91,17 @@ const Footer = ({ t }: { t: TFunction }) => {
             align="middle"
             style={{ paddingTop: "3rem" }}
           >
-            <NavLink to="/">
-              <LogoContainer>
-                <SvgIcon
-                  src="logo.png"
-                  aria-label="homepage"
-                  width="110px"
-                  height="50px"
-                />
-              </LogoContainer>
-            </NavLink>
+            <Title>CopyRight NXTFlights</Title>
             <FooterContainer>
-              <SocialLink
+              <FmdGoodOutlined />
+              8819 Ohio St. South Gate, CA 90280
+              <FmdGoodOutlined />
+              8819 Ohio St. South Gate, CA 90280
+              <FmdGoodOutlined />
+              8819 Ohio St. South Gate, CA 90280
+              <FmdGoodOutlined />
+              8819 Ohio St. South Gate, CA 90280
+              {/* <SocialLink
                 href="https://github.com/Adrinlol/create-react-app-adrinlol"
                 src="github.svg"
               />
@@ -149,7 +116,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               <SocialLink
                 href="https://medium.com/@lashakakabadze/"
                 src="medium.svg"
-              />
+              /> */}
             </FooterContainer>
           </Row>
         </Container>
