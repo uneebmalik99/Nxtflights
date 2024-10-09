@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import {
-  CaretDownFilled,
-  CaretUpFilled,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { CaretDownFilled, CaretUpFilled } from "@ant-design/icons";
+import SearchIcon from "@mui/icons-material/Search";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Link, useHistory, useLocation } from "react-router-dom";
@@ -122,7 +119,10 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const MenuItem = () => {
-    const searchBtnVariant = location.pathname === "/" ? "home" : "other";
+    const Routes = ["/", "/holiday-offer"];
+    const searchBtnVariant = Routes.includes(location.pathname)
+      ? "home"
+      : "other";
     return (
       <>
         <CustomNavLinkSmall as={Link} to="/">
@@ -196,7 +196,8 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall style={{ width: "180px" }} as={Link} to="/">
           <Span>
             <SearchBtn variant={searchBtnVariant}>
-              {t("Search")} <SearchOutlined />
+              <span style={{ marginRight: "10px" }}>{t("Search")}</span>{" "}
+              <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
         </CustomNavLinkSmall>

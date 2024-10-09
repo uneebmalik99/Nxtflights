@@ -58,7 +58,7 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1rem;
+  font-size: 12px;
   color: #333;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
@@ -94,15 +94,17 @@ export const Span = styled("span")`
   }
 `;
 
-export const SearchBtn = styled("button") <{ variant?: string }>`
-  padding: 10px 20px;
+export const SearchBtn = styled("button")<{ variant?: string }>`
+  padding: 10px;
   border-radius: 50px;
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
   font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  // Add styles based on the variant prop
   ${({ variant }) =>
     variant === "home" &&
     `
@@ -113,7 +115,7 @@ export const SearchBtn = styled("button") <{ variant?: string }>`
   ${({ variant }) =>
     variant === "other" &&
     `
-   border: 1px solid #4062BB;
+    border: 1px solid #4062BB;
     color: #4062BB;
   `}
 `;
