@@ -149,3 +149,55 @@
 .offer-card p {
   font-size: 14px;
 }
+
+.filter-wrapper {
+  background-color: #4062bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-wrapper {
+    flex-direction: column;
+    padding: 20px 0px 20px 0px;
+  }
+
+  .filter-container {
+    flex-direction: column;
+  }
+
+  .filter-item {
+    width: 100%;
+  }
+
+  .filter-button {
+    width: 100%;
+  }
+
+  .intro {
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .intro h2 {
+    font-size: 27px;
+  }
+
+  .intro p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .customRow {
+    flex-direction: column;
+  }
+
+  .customCol {
+    max-width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}

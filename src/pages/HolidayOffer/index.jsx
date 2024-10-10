@@ -19,15 +19,7 @@ const HolidayOffers = () => {
       <div className="holidayOfferContainer">
         <h1 className="pageName">Holiday Offers</h1>
       </div>
-      <div
-        style={{
-          backgroundColor: "#4062BB",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "50px 50px",
-        }}
-      >
+      <div className="filter-wrapper">
         <div className="filter-container">
           <div className="filter-item">
             <label>Where to?</label>
@@ -89,7 +81,7 @@ const HolidayOffers = () => {
       </div>
 
       <main className="offers">
-        <Row gutter={[16, 16]}>
+        <Row gutter={[16, 16]} className="customRow">
           {destinations.map((destination, index) => (
             <Col className="customCol" key={index} span={8}>
               <div
