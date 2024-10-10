@@ -1,0 +1,23 @@
+{
+  "title": "Special Offers",
+  "slides": [
+    {
+      "title": "Grab Upto 35% off On Your Favorite Destination",
+      "description": "Special offers available for a limited time.",
+      "buttonText": "Get Price",
+      "imageUrl": "../../assets/carosel.png"
+    },
+    {
+      "title": "Grab Upto 35% off On Your Favorite Destination",
+      "description": "Special offers available for a limited time.",
+      "buttonText": "Get Price",
+      "imageUrl": "../../assets/carosel.png"
+    },
+    {
+      "title": "Grab Upto 35% off On Your Favorite Destination",
+      "description": "Special offers available for a limited time.",
+      "buttonText": "Get Price",
+      "imageUrl": "../../assets/carosel.png"
+    }
+  ]
+}

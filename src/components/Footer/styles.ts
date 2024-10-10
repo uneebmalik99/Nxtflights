@@ -7,7 +7,7 @@ export const FooterSection = styled("footer")`
 `;
 
 export const Title = styled("h4")`
-  font-size: 22px;
+  font-size: 16px;
   text-transform: capitalize;
   color: #fff;
 
@@ -75,7 +75,7 @@ export const Empty = styled("div")`
 `;
 
 export const FooterContainer = styled("div")`
-  max-width: 510px;
+  max-width: 600px;
   width: 100%;
   display: flex;
   justify-content: space-between;

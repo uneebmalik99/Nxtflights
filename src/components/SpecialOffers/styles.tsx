@@ -26,6 +26,11 @@ export const SpecialOffersHeading = styled("h2")`
   color: #333;
   font-size: 40px;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
+    
 `;
 
 export const SliderContainer = styled("div")`
@@ -33,11 +38,15 @@ export const SliderContainer = styled("div")`
     width: 100%;
     margin-top: 20px;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-bottom: 10px;
+  }
 `;
 
 export const SliderImage = styled("img")`
   width: 100%;
-  height: auto;
+  height: 500px;
   object-fit: cover;
   border-radius: 15px;
 

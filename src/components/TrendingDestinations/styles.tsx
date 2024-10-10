@@ -32,7 +32,7 @@ export const DestinationsContainer = styled("div")`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 47px;
+  gap: 40px;
 `;
 
 export const DestinationItem = styled("div")`

@@ -1,5 +1,5 @@
 import { Fade } from "react-awesome-reveal";
-import SpecialOffersContent from "../../content/SpecialOffers.json";
+import SpecialOffersContent from "./SpecialOffers.json";
 import {
   SpecialOffersHeading,
   SpecialOffersSection,
@@ -16,7 +16,6 @@ const SpecialOffers = ({ direction }: SpecialOffersProps) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -39,6 +38,8 @@ const SpecialOffers = ({ direction }: SpecialOffersProps) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
+          dots: true,
         },
       },
     ],
@@ -53,42 +54,11 @@ const SpecialOffers = ({ direction }: SpecialOffersProps) => {
 
         <SliderContainer>
           <Slider {...settings}>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/237/1448/400"
-                alt="1"
-              />
-            </div>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/238/1448/400"
-                alt="2"
-              />
-            </div>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/239/1448/400"
-                alt="3"
-              />
-            </div>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/240/1448/400"
-                alt="4"
-              />
-            </div>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/241/1448/400"
-                alt="5"
-              />
-            </div>
-            <div>
-              <SliderImage
-                src="https://picsum.photos/id/242/1448/400"
-                alt="6"
-              />
-            </div>
+            {SpecialOffersContent.slides.map((slide, index) => (
+              <div>
+                <SliderImage src={slide.imageUrl} />
+              </div>
+            ))}
           </Slider>
         </SliderContainer>
       </SpecialOffersSection>
