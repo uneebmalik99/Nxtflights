@@ -119,7 +119,15 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const MenuItem = () => {
-    const Routes = ["/", "/holiday-offer"];
+    const Routes = [
+      "/",
+      "/holiday-offer",
+      "/country/dubai",
+      "/country/france",
+      "/country/usa",
+      "/country/greece",
+      "/country/japan",
+    ];
     const searchBtnVariant = Routes.includes(location.pathname)
       ? "home"
       : "other";
@@ -193,7 +201,7 @@ const Header = ({ t }: { t: TFunction }) => {
           </CustomNavLinkSmall>
         </Dropdown>
 
-        <CustomNavLinkSmall style={{ width: "180px" }} as={Link} to="/">
+        <CustomNavLinkSmall as={Link} to="/">
           <Span>
             <SearchBtn variant={searchBtnVariant}>
               <span style={{ marginRight: "10px" }}>{t("Search")}</span>{" "}

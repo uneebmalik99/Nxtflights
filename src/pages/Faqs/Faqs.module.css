@@ -41,14 +41,55 @@
   position: relative !important;
 }
 
-.MuiButtonBase {
+.MuiButtonBaseActive {
   background-color: #4062bb !important;
   border-radius: 50px !important;
   color: #fff !important;
-  padding: 10px 20px !important;
+  padding: 5px 20px !important;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.MuiAccordionSummary-expandIconWrapper {
-  background-color: #fff !important;
+.MuiButtonBaseInActive {
+  border: 1px solid #333;
+  border-radius: 50px !important;
+  color: #333 !important;
+  padding: 5px 20px !important;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.customExpandIcon {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 3px;
+  color: #4064dd;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .faqsBg {
+    height: 30vh;
+  }
+
+  .faqsHeadingDiv {
+    padding: 20px;
+  }
+
+  .faqsHeading {
+    font-size: 23px;
+  }
+
+  #faqs_plane_bg {
+    margin-top: -90px;
+  }
+
+  .faqsContainer {
+    padding: 10px;
+  }
+
+  .MuiButtonBaseActive,
+  .MuiButtonBaseInActive {
+    font-size: 15px;
+  }
 }
