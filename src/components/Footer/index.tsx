@@ -21,7 +21,7 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="start">
-            <Col lg={6} md={6} sm={24} xs={24}>
+            <Col lg={10} md={6} sm={24} xs={24}>
               <LogoContainer>
                 <SvgIcon
                   src="logo.png"
@@ -35,14 +35,14 @@ const Footer = ({ t }: { t: TFunction }) => {
                 eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
               </Para>
             </Col>
-            <Col lg={4} md={4} sm={24} xs={24}>
+            <Col lg={7} md={4} sm={24} xs={24}>
               <Title>{t("Service")}</Title>
               <Large to="/">{t("Business Flights")}</Large>
               <Large to="/">{t("Holiday Offers")}</Large>
               <Large to="/">{t("Airline Partners")}</Large>
               <Large to="/">{t("Travel Blog")}</Large>
             </Col>
-            <Col lg={4} md={4} sm={24} xs={24}>
+            <Col lg={7} md={4} sm={24} xs={24}>
               <Title>{t("Quick Links")}</Title>
               <Large to="/">{t("Home")}</Large>
               <Large to="/contact">{t("Contact")}</Large>
@@ -52,11 +52,15 @@ const Footer = ({ t }: { t: TFunction }) => {
         </Container>
       </FooterSection>
       <Extra>
-        <Container border={true}>
+        <Container border={false}>
           <Row
             justify="space-between"
             align="middle"
-            style={{ paddingTop: "3rem" }}
+            style={{
+              paddingTop: "3rem",
+              borderTop: "1px solid #76AEFF",
+              marginInline: 40,
+            }}
           >
             <Title>Copyright NXTFlights</Title>
             <FooterContainer>
@@ -69,7 +73,9 @@ const Footer = ({ t }: { t: TFunction }) => {
                 Nxtflights@hello.com
               </p>
               <LocalPhoneOutlinedIcon style={{ color: "#1E515F" }} />
-              <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>+1 222-333-444</p>
+              <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
+                +1 222-333-444
+              </p>
             </FooterContainer>
           </Row>
         </Container>

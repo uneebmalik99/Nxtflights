@@ -1,38 +1,44 @@
 import { Fade } from "react-awesome-reveal";
 import DailyBlogsContent from "../../content/DailyBlogs.json";
-import { DailyBlogsSection, DailyBlogsTitle } from "../DailyBlogs/styles";
+import { CustomButton, DailyBlogsSection, DailyBlogsTitle } from "../DailyBlogs/styles";
 import { DailyBlogsProps } from "./types";
 import { Button, Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 
 const cardData = [
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_1.png",
   },
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_2.png",
   },
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_3.png",
   },
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_1.png",
   },
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_2.png",
   },
   {
-    title: "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title:
+      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_3.png",
   },
@@ -74,9 +80,13 @@ const DailyBlogs = ({ direction }: DailyBlogsProps) => {
           ))}
         </Row>
         <div style={{ textAlign: "center", marginTop: "20px" }}>
-          <Button type="ghost" size="large" shape="round">
+          <CustomButton
+            type="ghost"
+            size="large"
+            className="viewAllBtn customBtnClass"
+          >
             View All Posts
-          </Button>
+          </CustomButton>
         </div>
       </DailyBlogsSection>
     </Fade>

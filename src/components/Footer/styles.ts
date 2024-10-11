@@ -41,6 +41,7 @@ export const Extra = styled("section")`
 export const LogoContainer = styled("div")`
   display: flex;
   position: relative;
+  marginbottom: 30px;
 `;
 
 export const Para = styled("div")`

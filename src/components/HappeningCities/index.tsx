@@ -45,7 +45,10 @@ const BenefitList: Benefit[] = [
 
 function HappeningCities({ direction }: HappeningCitiesProps) {
   return (
-    <Row gutter={[16, 16]} style={{ padding: "20px", marginTop: 150 }}>
+    <Row
+      gutter={[16, 16]}
+      style={{ padding: "20px 80px 20px 80px", marginTop: 150 }}
+    >
       {/* Left Side - Image */}
       <Col
         xs={24}

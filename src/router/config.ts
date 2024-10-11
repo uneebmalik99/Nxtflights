@@ -27,13 +27,12 @@ const routes = [
   },
   {
     path: ["/offer-detail/:destination"],
-    component: "OfferDetail",
+    component: "OfferDetail/index",
     chunkName: "offerDetail",
-
   },
   {
     path: ["/country/:location"],
-    component: "CountryPage",
+    component: "CountryPage/index",
     chunkName: "countryPage",
   },
 ];

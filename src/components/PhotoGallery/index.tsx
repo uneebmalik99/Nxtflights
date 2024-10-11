@@ -5,7 +5,7 @@ import { PhotoGalleryProps } from "./types";
 const photos = [
   {
     src: "../../assets/image_1.png",
-    width: 8,
+    width: 5,
     height: 2,
   },
   {
@@ -58,7 +58,7 @@ function renderImage(props: any) {
 
 function PhotoGallery({ direction }: PhotoGalleryProps) {
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div style={{ marginTop: "100px", padding: "20px 80px 20px 80px" }}>
       <h1 id="photo_h1">Photo Gallery</h1>
       <Gallery photos={photos} direction={"row"} renderImage={renderImage} />
     </div>
