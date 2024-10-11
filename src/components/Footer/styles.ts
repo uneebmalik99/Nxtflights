@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
-  background: #4062BB;
+  background: #4062bb;
   padding: 2.5rem;
 `;
 
@@ -10,6 +10,7 @@ export const Title = styled("h4")`
   font-size: 16px;
   text-transform: capitalize;
   color: #fff;
+  font-weight: bold;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -30,7 +31,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const Extra = styled("section")`
-  background: #4062BB;
+  background: #4062bb;
   position: relative;
   width: 100%;
   margin-right: auto;
@@ -41,12 +42,12 @@ export const Extra = styled("section")`
 export const LogoContainer = styled("div")`
   display: flex;
   position: relative;
-  marginbottom: 30px;
+  margin-bottom: 30px;
 `;
 
 export const Para = styled("div")`
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   width: 70%;
 `;
 
@@ -63,12 +64,11 @@ export const Large = styled(Link)`
   max-width: max-content;
 
   &:hover {
-    color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    color: #25addf;
+    /* text-underline-position: under; */
+    /* text-decoration: rgb(255, 130, 92) wavy underline; */
   }
 `;
-
 
 export const Empty = styled("div")`
   position: relative;

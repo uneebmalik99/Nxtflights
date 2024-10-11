@@ -11,12 +11,14 @@ export const SubHeading = styled.h2`
   margin-bottom: 10px;
   color: #94a1ac;
   text-transform: uppercase;
+  font-weight: bold;
 `;
 
 export const Heading = styled.h2`
   font-size: 40px;
   margin-bottom: 20px;
   color: #333;
+  font-weight: 600;
 
   @media (max-width: 768px) {
     font-size: 30px;
@@ -37,10 +39,11 @@ export const Title = styled.h3`
   font-size: 18px;
   margin: 5px 0;
   color: #333;
+  font-weight: bold;
 `;
 
 export const Description = styled.p`
   color: #848484;
   font-size: 14px;
-  color: #666;
+  font-weight: 500;
 `;

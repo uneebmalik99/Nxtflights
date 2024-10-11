@@ -57,11 +57,19 @@ export const Menu = styled("h5")`
   text-align: center;
 `;
 
-export const CustomNavLinkSmall = styled(NavLink)`
+export const CustomNavLinkSmall = styled(NavLink).attrs({
+  activeClassName: "active",
+})`
   font-size: 12px;
   color: #333;
   transition: color 0.2s ease-in;
   margin: 0.5rem 2rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  &.active {
+    color: #25addf;
+  }
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
@@ -88,9 +96,9 @@ export const Span = styled("span")`
   &:hover,
   &:active,
   &:focus {
-    color: #333;
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
+    color: #25addf;
+    /* text-underline-position: under; */
+    /* text-decoration: rgb(255, 130, 92) wavy underline; */
   }
 `;
 

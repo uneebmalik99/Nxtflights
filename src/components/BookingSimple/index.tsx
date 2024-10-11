@@ -29,7 +29,7 @@ const BookingSimple = ({ direction }: BookingSimpleProps) => {
         <BookingSimpleSubTitle>
           {BookingSimpleContent.title}
         </BookingSimpleSubTitle>
-        <p style={{ fontSize: 15, color: "#333", fontWeight: "normal" }}>
+        <p style={{ fontSize: 15, color: "#000", fontWeight: 400 }}>
           Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
           turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec
           fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus

@@ -38,10 +38,6 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const history = useHistory();
 
-  const handleNavigate = (path: string) => {
-    history.push(path);
-  };
-
   const destinationsMenu = (
     <AntMenu>
       <AntMenu.Item onClick={() => scrollTo("destination1")}>
@@ -61,30 +57,6 @@ const Header = ({ t }: { t: TFunction }) => {
         </AntMenu.Item>
         <AntMenu.Item onClick={() => scrollTo("destination3-2")}>
           {t("Destination 3-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
-    </AntMenu>
-  );
-
-  const holidayOffersMenu = (
-    <AntMenu>
-      <AntMenu.Item onClick={() => handleNavigate("/holiday-offer")}>
-        {t("Holiday Offer")}
-      </AntMenu.Item>
-      <AntMenu.SubMenu title={t("Holiday Offer 2")}>
-        <AntMenu.Item onClick={() => handleNavigate("offer2-1")}>
-          {t("Holiday Offer 2-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => handleNavigate("offer2-2")}>
-          {t("Holiday Offer 2-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
-      <AntMenu.SubMenu title={t("Holiday Offer 3")}>
-        <AntMenu.Item onClick={() => handleNavigate("offer3-1")}>
-          {t("Holiday Offer 3-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => handleNavigate("offer3-2")}>
-          {t("Holiday Offer 3-2")}
         </AntMenu.Item>
       </AntMenu.SubMenu>
     </AntMenu>
@@ -133,7 +105,11 @@ const Header = ({ t }: { t: TFunction }) => {
       : "other";
     return (
       <>
-        <CustomNavLinkSmall as={Link} to="/">
+        <CustomNavLinkSmall
+          as={Link}
+          to="/"
+          className={location.pathname === "/" ? "active" : ""}
+        >
           <Span>{t("Home")}</Span>
         </CustomNavLinkSmall>
 
@@ -161,25 +137,13 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Business Class Flights")}</Span>
         </CustomNavLinkSmall>
 
-        <Dropdown
-          overlay={holidayOffersMenu}
-          trigger={["hover"]}
-          placement="bottom"
-          onVisibleChange={(visible) =>
-            handleDropdownVisibleChange("holidayOffers", visible)
-          }
+        <CustomNavLinkSmall
+          as={Link}
+          to="/holiday-offer"
+          className={location.pathname === "/holiday-offer" ? "active" : ""}
         >
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Holiday Offers")}{" "}
-              {openDropdown === "holidayOffers" ? (
-                <CaretUpFilled />
-              ) : (
-                <CaretDownFilled />
-              )}
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
+          <Span>{t("Holiday Offers")}</Span>
+        </CustomNavLinkSmall>
 
         <Dropdown
           overlay={ourAirlinesPartnersMenu}

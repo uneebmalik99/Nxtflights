@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SpecialOffersSection = styled("section")`
   text-align: left;
-  padding: 80px;
+  padding: 30px 80px;
   height: 700px;
   background-color: #ebebeb;
 
@@ -26,6 +26,7 @@ export const SpecialOffersHeading = styled("h2")`
   color: #333;
   font-size: 40px;
   margin-bottom: 40px;
+  font-weight: 600;
 
   @media screen and (max-width: 480px) {
     margin-bottom: 10px;

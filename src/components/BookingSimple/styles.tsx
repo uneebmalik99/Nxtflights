@@ -21,6 +21,7 @@ export const BookingSimpleTitle = styled("h2")`
   font-size: 40px;
   margin-bottom: 50px;
   color: #333;
+  font-weight: 600;
 
   @media screen and (max-width: 768px) {
     font-size: 30px;
@@ -41,6 +42,6 @@ export const BookingSimpleTitle = styled("h2")`
 export const BookingSimpleSubTitle = styled("h2")`
   font-size: 24px;
   margin-top: 50px;
-  color: #333;
-  font-weight: semi-bold;
+  color: #000;
+  font-weight: 600;
 `;

@@ -7,7 +7,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
   return (
     <div className="formContainer">
       <Fade direction={direction} triggerOnce>
-        <Card className="filtersCard" style={{}}>
+        <Card className="filtersCard">
           <Row className="filterParentRow">
             <Col className="responsive-col" span={16}>
               <div className="leftHeading">
@@ -85,8 +85,10 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
               }}
               id="rightCol"
             >
-              <p style={{ fontWeight: "bold" }}>Why Work with Us?</p>
-              <ul style={{ fontSize: 20 }}>
+              <p style={{ fontWeight: "600", color: "#4062BB" }}>
+                Why Work with Us?
+              </p>
+              <ul style={{ fontSize: 16, fontWeight: "normal" }}>
                 <li>
                   Best prices for flights,
                   <br /> hotels & car
@@ -98,7 +100,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "50%",
+                  marginTop: "35%",
                 }}
               >
                 <img

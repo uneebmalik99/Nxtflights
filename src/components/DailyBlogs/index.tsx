@@ -1,26 +1,30 @@
 import { Fade } from "react-awesome-reveal";
 import DailyBlogsContent from "../../content/DailyBlogs.json";
-import { CustomButton, DailyBlogsSection, DailyBlogsTitle } from "../DailyBlogs/styles";
+import {
+  CustomButton,
+  DailyBlogsSection,
+  DailyBlogsTitle,
+  StyledMetaDescription,
+  StyledMetaTitle,
+} from "../DailyBlogs/styles";
 import { DailyBlogsProps } from "./types";
-import { Button, Card, Col, Row } from "antd";
+import { Card, Col, Row } from "antd";
 import Meta from "antd/lib/card/Meta";
 
 const cardData = [
   {
     title:
-      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+      "Virgin Atlantic \nLaunche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_1.png",
   },
   {
-    title:
-      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title: "Airline lounge and paid lounge comparison at heathrow",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_2.png",
   },
   {
-    title:
-      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title: "Britis airways first class review",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_3.png",
   },
@@ -31,14 +35,12 @@ const cardData = [
     imageUrl: "../../../assets/blog_1.png",
   },
   {
-    title:
-      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title: "Airline lounge and paid lounge comparison at heathrow",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_2.png",
   },
   {
-    title:
-      "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
+    title: "Britis airways first class review",
     description: "August 20, 2022",
     imageUrl: "../../../assets/blog_3.png",
   },
@@ -74,12 +76,19 @@ const DailyBlogs = ({ direction }: DailyBlogsProps) => {
                     marginBottom: "30px",
                   }}
                 />
-                <Meta title={card.title} description={card.description} />
+                <Meta
+                  title={<StyledMetaTitle>{card.title}</StyledMetaTitle>}
+                  description={
+                    <StyledMetaDescription>
+                      {card.description}
+                    </StyledMetaDescription>
+                  }
+                />
               </Card>
             </Col>
           ))}
         </Row>
-        <div style={{ textAlign: "center", marginTop: "20px" }}>
+        <div style={{ textAlign: "center", marginTop: "35px" }}>
           <CustomButton
             type="ghost"
             size="large"

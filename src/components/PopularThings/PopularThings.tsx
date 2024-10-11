@@ -8,53 +8,6 @@ function PopularThings({ direction }: PopularThingsProps) {
     <>
       <div className="PopularThingSection">
         <h2 id="popular_h1">Popular things to do</h2>
-        {/* <Row>
-          <Col className="imgCol">
-            <img
-              src="../../assets/cruise.png"
-              alt="Cruising"
-              className="popularThingsImgs"
-            />
-          </Col>
-          <Col className="imgCol">
-            <img
-              src="../../assets/beach.png"
-              alt="Beach"
-              className="popularThingsImgs"
-            />
-          </Col>
-          <Col className="imgCol">
-            <img
-              src="../../assets/citytour.png"
-              alt="City Tour"
-              className="popularThingsImgs"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col className="imgCol">
-            <img
-              src="../../assets/museum.png"
-              alt="Museum"
-              className="popularThingsImgs"
-            />
-          </Col>
-          <Col className="imgCol">
-            <img
-              src="../../assets/hiking.png"
-              alt="Hiking"
-              className="popularThingsImgs"
-            />
-          </Col>
-          <Col className="imgCol">
-            <img
-              src="../../assets/food.png"
-              alt="Food"
-              className="popularThingsImgs"
-            />
-          </Col>
-        </Row> */}
-
         <Row>
           <Col span={7} style={{ padding: 10 }}>
             <Row>
@@ -65,7 +18,14 @@ function PopularThings({ direction }: PopularThingsProps) {
                   marginBottom: 10,
                   position: "relative",
                   overflow: "hidden",
+                  transition: "transform 0.3s ease-in-out",
                 }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               >
                 <img
                   src="../../assets/cruise.png"
@@ -86,7 +46,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                     padding: "5px 10px",
                     color: "white",
                     fontSize: "16px",
-                    fontWeight: "bold",
+                    fontWeight: 600,
                   }}
                 >
                   Crusing
@@ -101,7 +61,14 @@ function PopularThings({ direction }: PopularThingsProps) {
                   marginTop: 10,
                   position: "relative",
                   overflow: "hidden",
+                  transition: "transform 0.3s ease-in-out",
                 }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               >
                 <img
                   src="../../assets/museum.png"
@@ -119,7 +86,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                     padding: "5px 10px",
                     color: "white",
                     fontSize: "16px",
-                    fontWeight: "bold",
+                    fontWeight: 600,
                   }}
                 >
                   Museum Tour
@@ -136,7 +103,14 @@ function PopularThings({ direction }: PopularThingsProps) {
                   marginBottom: 10,
                   position: "relative",
                   overflow: "hidden",
+                  transition: "transform 0.3s ease-in-out",
                 }}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
               >
                 <img
                   src="../../assets/beach.png"
@@ -154,7 +128,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                     padding: "5px 10px",
                     color: "white",
                     fontSize: "16px",
-                    fontWeight: "bold",
+                    fontWeight: 600,
                   }}
                 >
                   Beach
@@ -177,7 +151,14 @@ function PopularThings({ direction }: PopularThingsProps) {
                     width: "100%",
                     position: "relative",
                     overflow: "hidden",
+                    transition: "transform 0.3s ease-in-out",
                   }}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.05)")
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
                 >
                   <img
                     src="../../assets/hiking.png"
@@ -195,7 +176,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                       padding: "5px 10px",
                       color: "white",
                       fontSize: "16px",
-                      fontWeight: "bold",
+                      fontWeight: 600,
                     }}
                   >
                     Hiking
@@ -209,7 +190,14 @@ function PopularThings({ direction }: PopularThingsProps) {
                     width: "100%",
                     position: "relative",
                     overflow: "hidden",
+                    transition: "transform 0.3s ease-in-out",
                   }}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.style.transform = "scale(1.05)")
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.style.transform = "scale(1)")
+                  }
                 >
                   <img
                     src="../../assets/food.png"
@@ -227,7 +215,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                       padding: "5px 10px",
                       color: "white",
                       fontSize: "16px",
-                      fontWeight: "bold",
+                      fontWeight: 600,
                     }}
                   >
                     Food
@@ -254,7 +242,12 @@ function PopularThings({ direction }: PopularThingsProps) {
                 alignItems: "center",
                 position: "relative",
                 overflow: "hidden",
+                transition: "transform 0.3s ease-in-out",
               }}
+              onMouseOver={(e) =>
+                (e.currentTarget.style.transform = "scale(1.05)")
+              }
+              onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
               <img
                 src="../../assets/citytour.png"
@@ -276,7 +269,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                   padding: "5px 10px",
                   color: "white",
                   fontSize: "16px",
-                  fontWeight: "bold",
+                  fontWeight: 600,
                 }}
               >
                 City Tour

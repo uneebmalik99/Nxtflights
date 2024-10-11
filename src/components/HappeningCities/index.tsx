@@ -72,12 +72,12 @@ function HappeningCities({ direction }: HappeningCitiesProps) {
               color={benefit.tagColor}
               style={{
                 borderRadius: 28,
-                width: 100,
-                height: 30,
-                padding: 4,
+                width: 90,
+                height: 22,
                 textAlign: "center",
                 color: `${benefit.fontColor}`,
                 marginBottom: 15,
+                fontWeight: 600
               }}
             >
               {benefit.tag}

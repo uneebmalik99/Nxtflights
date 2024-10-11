@@ -62,7 +62,7 @@ const ClientsReview = ({ direction }: ClientsReviewProps) => {
                 alt={review.name}
               />
               <p className="review-text">"{review.review}"</p>
-              <h3>{review.name}</h3>
+              <h3 className="review-name">{review.name}</h3>
               <div className="review-rating">
                 {"★".repeat(review.rating)} {"☆".repeat(5 - review.rating)}
               </div>

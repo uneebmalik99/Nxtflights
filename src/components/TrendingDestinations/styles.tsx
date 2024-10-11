@@ -13,6 +13,8 @@ export const TrendingDestinationsHeading = styled("h2")`
   color: #333;
   font-size: 40px;
   padding-left: 70px;
+  font-weight: 600;
+  margin-bottom: 30px;
 
   @media screen and (max-width: 768px) {
     font-size: 30px;
@@ -32,7 +34,8 @@ export const DestinationsContainer = styled("div")`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
+  margin-left: 20px;
 `;
 
 export const DestinationItem = styled("div")`
@@ -52,14 +55,14 @@ export const DestinationImage = styled("img")`
 export const DestinationTitle = styled("p")`
   margin: 10px 0 5px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   color: #000;
 `;
 
 export const DestinationDescription = styled("p")`
   color: #000;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
 `;
 
 export const BackgroundImage = styled("img")`

@@ -58,7 +58,7 @@ function renderImage(props: any) {
 
 function PhotoGallery({ direction }: PhotoGalleryProps) {
   return (
-    <div style={{ marginTop: "100px", padding: "20px 80px 20px 80px" }}>
+    <div style={{ marginTop: "100px", padding: "20px 50px" }}>
       <h1 id="photo_h1">Photo Gallery</h1>
       <Gallery photos={photos} direction={"row"} renderImage={renderImage} />
     </div>

@@ -4,16 +4,66 @@ export const Styles = createGlobalStyle`
 
     @font-face {
         font-family: "Montserrat";
+        src: url("/fonts/Montserrat-Thin.ttf") format("truetype");
+        font-weight: 100; /* Thin */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+        font-weight: 200; /* Extra Light */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
         src: url("/fonts/Montserrat-Light.ttf") format("truetype");
+        font-weight: 300; /* Light */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+        font-weight: 400; /* Regular */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+        font-weight: 500; /* Medium */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+        font-weight: 600; /* Semi Bold */
         font-style: normal;
     }
 
     @font-face {
         font-family: "Montserrat";
         src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+        font-weight: 700; /* Bold */
         font-style: normal;
     }
 
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+        font-weight: 800; /* Extra Bold */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Montserrat";
+        src: url("/fonts/Montserrat-Black.ttf") format("truetype");
+        font-weight: 900; /* Black */
+        font-style: normal;
+    }
 
     body,
     html,
@@ -21,10 +71,9 @@ export const Styles = createGlobalStyle`
         font-family: "Montserrat";
     }
 
-
     body {
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
         border: 0;
         outline: 0;
         background: #fff;

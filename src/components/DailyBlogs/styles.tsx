@@ -21,6 +21,7 @@ export const DailyBlogsTitle = styled("h2")`
   font-size: 40px;
   margin-bottom: 50px;
   color: #333;
+  font-weight: 600;
 
   @media screen and (max-width: 768px) {
     margin-bottom: 20px;
@@ -37,7 +38,23 @@ export const CustomButton = styled(Button)`
   &.customBtnClass {
     color: #696a75;
     border: 1px solid #696a75;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 7px 20px;
+    border-radius: 7px;
+    width: 150px;
+    height: 50px;
   }
+`;
+
+export const StyledMetaTitle = styled.span`
+  font-size: 24px;
+  font-weight: bold;
+  color: #181a2a;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
+`;
+
+export const StyledMetaDescription = styled.span`
+  font-size: 14px;
+  color: #97989f;
 `;
