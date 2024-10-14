@@ -1,9 +1,70 @@
 import { Fade } from "react-awesome-reveal";
 import { FlightBookingFormProps } from "./types";
 import "./FlightBookingForm.css";
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Row, Spin, notification, Modal } from "antd";
+import axios from "axios";
+import { useState } from "react";
 
 function FlightBookingForm({ direction }: FlightBookingFormProps) {
+  const initialFormData = {
+    departFrom: "",
+    arriveAt: "",
+    leaveOn: "",
+    returnOn: "",
+    name: "",
+    phone: "",
+    email: "",
+    comments: "",
+    travelClass1: "",
+    travelClass2: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+
+  const [loading, setLoading] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async () => {
+    // Start loading
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}/flight-request`,
+        formData
+      );
+      // Stop loading
+      setLoading(false);
+      // Show the modal on success
+      setIsModalVisible(true);
+
+      // Show the notification on success
+      notification.success({
+        message: "Success",
+        description: "Email sent successfully.",
+      });
+
+      // Clear the form data on success
+      setFormData(initialFormData);
+    } catch (error) {
+      // Stop loading
+      setLoading(false);
+      console.error("Error sending email:", error);
+      notification.error({
+        message: "Error",
+        description: "Failed to send email.",
+      });
+    }
+  };
+
   return (
     <div className="formContainer">
       <Fade direction={direction} triggerOnce>
@@ -17,7 +78,12 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 <Col span={12} className="leftChildCol">
                   <div className="inputDiv">
                     <label>Depart from</label>
-                    <input type="text" value="John Doe" />
+                    <input
+                      type="text"
+                      name="departFrom"
+                      value={formData.departFrom}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div style={{ display: "flex" }}>
                     <div
@@ -25,24 +91,53 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                       style={{ width: "46%", marginRight: 10 }}
                     >
                       <label>Leave On</label>
-                      <input type="date" />
+                      <input
+                        type="date"
+                        name="leaveOn"
+                        value={formData.leaveOn}
+                        onChange={handleChange}
+                      />
                     </div>
                     <div className="inputDiv" style={{ width: "50%" }}>
                       <label>Return</label>
-                      <input type="date" />
+                      <input
+                        type="date"
+                        name="returnOn"
+                        value={formData.returnOn}
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                   <div className="inputDiv">
-                    <input type="text" placeholder="Name" id="name" />
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="inputDiv">
-                    <input type="text" placeholder="Phone" id="phone" />
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
                   </div>
                 </Col>
                 <Col span={12} className="leftChildCol">
                   <div className="inputDiv">
                     <label>Arrive at</label>
-                    <input type="text" value="John Doe" />
+                    <input
+                      type="text"
+                      name="arriveAt"
+                      value={formData.arriveAt}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div style={{ display: "flex" }}>
                     <div
@@ -50,28 +145,60 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                       style={{ width: "46%", marginRight: 10 }}
                     >
                       <label>Class</label>
-                      <select>
+                      <select
+                        name="travelClass1"
+                        value={formData.travelClass1}
+                        onChange={handleChange}
+                      >
                         <option value="Business">Business</option>
+                        <option value="Economy">Economy</option>
+                        <option value="First Class">First Class</option>
                       </select>
                     </div>
                     <div className="inputDiv" style={{ width: "50%" }}>
                       <label>Class</label>
-                      <select>
+                      <select
+                        name="travelClass2"
+                        value={formData.travelClass2}
+                        onChange={handleChange}
+                      >
                         <option value="Business">Business</option>
+                        <option value="Economy">Economy</option>
+                        <option value="First Class">First Class</option>
                       </select>
                     </div>
                   </div>
                   <div className="inputDiv">
-                    <input type="text" placeholder="Email" id="email" />
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      id="email"
+                    />
                   </div>
                   <div className="inputDiv">
-                    <input type="text" placeholder="Comments" id="comments" />
+                    <input
+                      type="text"
+                      name="comments"
+                      placeholder="Comments"
+                      value={formData.comments}
+                      onChange={handleChange}
+                      id="comments"
+                    />
                   </div>
                 </Col>
                 <Col span={24}>
                   <div className="getPriceDiv">
-                    <Button type="default" shape="round" id="get-price">
-                      Get Price
+                    <Button
+                      type="default"
+                      shape="round"
+                      id="get-price"
+                      onClick={handleSubmit}
+                      disabled={loading}
+                    >
+                      {loading ? <Spin /> : "Get Price"}
                     </Button>
                   </div>
                 </Col>
@@ -125,6 +252,17 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
           </Row>
         </Card>
       </Fade>
+      <Modal
+        title="Success"
+        visible={isModalVisible}
+        onOk={() => setIsModalVisible(false)}
+        onCancel={() => setIsModalVisible(false)}
+      >
+        <p>
+          Your request is being submitted successfully. We will inform you
+          shortly.
+        </p>
+      </Modal>
     </div>
   );
 }

@@ -1,9 +1,65 @@
-import { lazy } from "react";
+import { lazy, useState } from "react";
 import styles from "../Contact/Contact.module.css";
+import axios from "axios";
+import { Spin, notification } from "antd";
 
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const Contact = () => {
+  const contactForm = {
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  };
+
+  const [formData, setFormData] = useState(contactForm);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Start loading
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}/send-contact-email`,
+        formData
+      );
+      // Stop loading
+      setLoading(false);
+
+      // Show the notification on success
+      notification.success({
+        message: "Success",
+        description: "Email sent successfully.",
+      });
+
+      // Clear the form data on success
+      setFormData(contactForm);
+    } catch (error) {
+      // Stop loading
+      setLoading(false);
+      console.error("Error sending contact email:", error);
+      notification.error({
+        message: "Error",
+        description: "Failed to send email.",
+      });
+    }
+  };
+
   return (
     <>
       <ScrollToTop />
@@ -33,7 +89,8 @@ const Contact = () => {
               </div>
               <p>
                 <strong>Email Us</strong>
-                <br /> contact@example.com
+                <br />
+                <a href="mailto:contact@example.com">contact@example.com</a>
               </p>
             </div>
             <div className={styles.infoItem}>
@@ -42,7 +99,9 @@ const Contact = () => {
               </div>
               <p>
                 <strong>Phone</strong>
-                <br /> (123) 456-7890
+                <a href="tel:(123) 456-7890">
+                  <br /> (123) 456-7890
+                </a>
               </p>
             </div>
             <div className={styles.hr}>
@@ -66,22 +125,66 @@ const Contact = () => {
           <div className={styles.send_msg_div}>
             <p id={styles.send_msg}>Send Us a Message</p>
           </div>
-          <form className={styles.contactForm}>
+          <form className={styles.contactForm} onSubmit={handleSubmit}>
             <div className={styles.formRow}>
-              <input type="text" placeholder="First Name" required />
-              <input type="text" placeholder="Last Name" required />
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className={styles.formRow}>
-              <input type="tel" placeholder="Phone" required />
-              <input type="email" placeholder="Email" required />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className={styles.lastFormRow}>
-              <input type="text" placeholder="Subject" required />
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className={styles.lastFormRow}>
-              <textarea placeholder="Message" rows={4} required></textarea>
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleChange}
+                rows={4}
+                required
+              ></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={loading}>
+              {loading ? <Spin /> : "Send Message"}
+            </button>
           </form>
         </div>
       </div>

@@ -123,12 +123,16 @@
 
 .socialLinks a {
   margin-right: 15px;
-  font-size: 15px;
+  /* font-size: 15px; */
   color: #fff;
   text-decoration: none;
   border-radius: 50%;
   padding: 12px;
   background-color: #007bff;
+}
+
+.socialLinks a i {
+  font-size: 18px;
 }
 
 .contactFormWrapper {
