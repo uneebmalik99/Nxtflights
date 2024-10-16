@@ -4,7 +4,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const destinationsData = {
+// Define a type with a string index signature
+interface DestinationData {
+  [key: string]: {
+    description: string;
+    imageUrl: string;
+    para_1: string;
+    para_2: string;
+  };
+}
+
+const destinationsData: DestinationData = {
   dubai: {
     description: "5 nights stay (including return ticket)",
     imageUrl: "../../assets/offer_1.png",
@@ -32,18 +42,20 @@ const destinationsData = {
 };
 
 const OfferDetail = () => {
-  const { destination } = useParams();
-  const offer = destinationsData[destination.toLowerCase()];
+  const { destination } = useParams<{ destination: string }>();
+  const destinationLower = destination?.toLowerCase();
+
+  const offer = destinationLower
+    ? destinationsData[destinationLower]
+    : undefined;
 
   if (!offer) {
     return <div>Offer not found!</div>;
   }
 
-  function toSentenceCase(str) {
+  function toSentenceCase(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
-
-  console.log(destination);
 
   const settings = {
     dots: true,

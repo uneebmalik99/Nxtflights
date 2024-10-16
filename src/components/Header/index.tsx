@@ -19,10 +19,141 @@ import {
   SearchBtn,
 } from "./styles";
 
+const { SubMenu } = AntMenu;
+
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
+
+  const destinations: { [key: string]: string[] } = {
+    Africa: [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Port Elizabeth",
+      "Zanzibar",
+    ],
+    Asia: [
+      "Bali",
+      "Bangkok",
+      "Beijing",
+      "Delhi",
+      "Hanoi",
+      "Ho Chi Minh City",
+      "Hong Kong",
+      "Jakarta",
+      "Koh Samui",
+      "Krabi",
+      "Kuala Lumpur",
+      "Langkawi",
+      "Manila",
+      "Osaka",
+      "Penang",
+      "Phuket",
+      "Seoul",
+      "Shanghai",
+      "Singapore",
+      "Sri Lanka",
+      "Taipei",
+      "Thailand",
+      "Tokyo",
+    ],
+    "Australasia & Pacific": [
+      "Adelaide",
+      "Alice Springs",
+      "Auckland",
+      "Australia",
+      "Brisbane",
+      "Cairns",
+      "Christchurch",
+      "Fiji ",
+      "Melbourne",
+      "New Zealand",
+      "Perth ",
+      "Sydney",
+      "Wellington",
+    ],
+    "Caribbean & Mexico": [
+      "Antigua",
+      "Bahamas",
+      "Barbados",
+      "Cancun",
+      "Cuba",
+      "Dominican Republic",
+      "Grenada",
+      "Jamaica",
+      "St Lucia",
+      "The Caribbean",
+      "Trinidad",
+    ],
+    "Indian Ocean": ["Maldives", "Mauritius", "Seychelles"],
+    "Middle East": [
+      "Abu Dhabi",
+      "Bahrain",
+      "Doha",
+      "Jeddah",
+      "Kuwait",
+      "Muscat",
+      "Riyadh",
+    ],
+    "North America": [
+      "Atlanta",
+      "Austin",
+      "Baltimore",
+      "Boston",
+      "Calgary",
+      "Canada",
+      "Charlotte",
+      "Chicago",
+      "Dallas",
+      "Denver",
+      "Detroit",
+      "Edmonton",
+      "Hawaii",
+      "Houston",
+      "Las Vegas",
+      "Los Angeles",
+      "Memphis",
+      "Miami",
+      "Minneapolis",
+      "Montreal",
+      "Nashville",
+      "New Orleans",
+      "New York",
+      "Orlando",
+      "Ottawa",
+      "Philadelphia",
+      "Phoenix",
+      "Portland",
+      "Quebec",
+      "Raleigh",
+      "Salt Lake City",
+      "San Diego",
+      "San Francisco",
+      "San Jose",
+      "Seattle",
+      "Tampa",
+      "The USA",
+      "Toronto",
+      "Vancouver",
+      "Washington, D.C.",
+      "Winnipeg",
+    ],
+    "South & Central America": [
+      "Buenos Aires",
+      "Lima",
+      "Rio de Janeiro",
+      "Santiago",
+      "Sao Paulo",
+    ],
+  };
+
+  const history = useHistory();
+
+  const handleNavigation = (destination: string) => {
+    history.push(`/country/${destination.toLowerCase().replace(/\s+/g, "-")}`);
+  };
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -36,29 +167,37 @@ const Header = ({ t }: { t: TFunction }) => {
     setVisibility(false);
   };
 
-  const history = useHistory();
+  const DestinationsMenu = () => (
+    <AntMenu mode="horizontal">
+      {/* 
+      <SubMenu title="Australasia & Pacific">
 
-  const destinationsMenu = (
-    <AntMenu>
-      <AntMenu.Item onClick={() => scrollTo("destination1")}>
-        {t("Destination 1")}
-      </AntMenu.Item>
-      <AntMenu.SubMenu title={t("Destination 2")}>
-        <AntMenu.Item onClick={() => scrollTo("destination2-1")}>
-          {t("Destination 2-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("destination2-2")}>
-          {t("Destination 2-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
-      <AntMenu.SubMenu title={t("Destination 3")}>
-        <AntMenu.Item onClick={() => scrollTo("destination3-1")}>
-          {t("Destination 3-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("destination3-2")}>
-          {t("Destination 3-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
+      </SubMenu>
+      <SubMenu title="Caribbean & Mexico">
+        <AntMenu.Item> Adelaide </AntMenu.Item>
+        <AntMenu.Item> Alice Springs </AntMenu.Item>
+        <AntMenu.Item> Auckland </AntMenu.Item>
+        <AntMenu.Item> Australia </AntMenu.Item>
+        <AntMenu.Item> Brisbane </AntMenu.Item>
+        <AntMenu.Item> Cairns </AntMenu.Item>
+        <AntMenu.Item> Christchurch </AntMenu.Item>
+        <AntMenu.Item> Fiji </AntMenu.Item>
+        <AntMenu.Item> Melbourne </AntMenu.Item>
+        <AntMenu.Item> New Zealand </AntMenu.Item>
+        <AntMenu.Item> Perth </AntMenu.Item>
+        <AntMenu.Item> Sydney </AntMenu.Item>
+        <AntMenu.Item> Wellington </AntMenu.Item>
+      </SubMenu> */}
+
+      {Object.entries(destinations).map(([region, cities]) => (
+        <SubMenu key={region} title={region}>
+          {cities.map((city) => (
+            <AntMenu.Item key={city} onClick={() => handleNavigation(city)}>
+              {city}
+            </AntMenu.Item>
+          ))}
+        </SubMenu>
+      ))}
     </AntMenu>
   );
 
@@ -86,10 +225,6 @@ const Header = ({ t }: { t: TFunction }) => {
     </AntMenu>
   );
 
-  const handleDropdownVisibleChange = (key: string, visible: boolean) => {
-    setOpenDropdown(visible ? key : null);
-  };
-
   const MenuItem = () => {
     const Routes = [
       "/",
@@ -113,14 +248,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Home")}</Span>
         </CustomNavLinkSmall>
 
-        <Dropdown
-          overlay={destinationsMenu}
-          trigger={["hover"]}
-          placement="bottom"
-          onVisibleChange={(visible) =>
-            handleDropdownVisibleChange("destinations", visible)
-          }
-        >
+        <Dropdown overlay={<DestinationsMenu />} trigger={["click"]}>
           <CustomNavLinkSmall>
             <Span>
               {t("Destinations")}{" "}
@@ -145,14 +273,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Holiday Offers")}</Span>
         </CustomNavLinkSmall>
 
-        <Dropdown
-          overlay={ourAirlinesPartnersMenu}
-          trigger={["hover"]}
-          placement="bottomLeft"
-          onVisibleChange={(visible) =>
-            handleDropdownVisibleChange("ourAirlinePartners", visible)
-          }
-        >
+        <Dropdown overlay={ourAirlinesPartnersMenu} trigger={["click"]}>
           <CustomNavLinkSmall>
             <Span>
               {t("Our Airline Partners")}{" "}

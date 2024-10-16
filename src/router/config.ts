@@ -35,6 +35,11 @@ const routes = [
     component: "CountryPage/index",
     chunkName: "countryPage",
   },
+  {
+    path: ["/test/:country"],
+    component: "Test",
+    chunkName: "test",
+  },
 ];
 
 export default routes;
