@@ -40,6 +40,11 @@ const routes = [
     component: "Test",
     chunkName: "test",
   },
+  {
+    path: ["/airlines"],
+    component: "Airlines",
+    chunkName: "airlines ",
+  },
 ];
 
 export default routes;

@@ -169,26 +169,6 @@ const Header = ({ t }: { t: TFunction }) => {
 
   const DestinationsMenu = () => (
     <AntMenu mode="horizontal">
-      {/* 
-      <SubMenu title="Australasia & Pacific">
-
-      </SubMenu>
-      <SubMenu title="Caribbean & Mexico">
-        <AntMenu.Item> Adelaide </AntMenu.Item>
-        <AntMenu.Item> Alice Springs </AntMenu.Item>
-        <AntMenu.Item> Auckland </AntMenu.Item>
-        <AntMenu.Item> Australia </AntMenu.Item>
-        <AntMenu.Item> Brisbane </AntMenu.Item>
-        <AntMenu.Item> Cairns </AntMenu.Item>
-        <AntMenu.Item> Christchurch </AntMenu.Item>
-        <AntMenu.Item> Fiji </AntMenu.Item>
-        <AntMenu.Item> Melbourne </AntMenu.Item>
-        <AntMenu.Item> New Zealand </AntMenu.Item>
-        <AntMenu.Item> Perth </AntMenu.Item>
-        <AntMenu.Item> Sydney </AntMenu.Item>
-        <AntMenu.Item> Wellington </AntMenu.Item>
-      </SubMenu> */}
-
       {Object.entries(destinations).map(([region, cities]) => (
         <SubMenu key={region} title={region}>
           {cities.map((city) => (
@@ -198,30 +178,6 @@ const Header = ({ t }: { t: TFunction }) => {
           ))}
         </SubMenu>
       ))}
-    </AntMenu>
-  );
-
-  const ourAirlinesPartnersMenu = (
-    <AntMenu>
-      <AntMenu.Item onClick={() => scrollTo("offer1")}>
-        {t("Airline 1")}
-      </AntMenu.Item>
-      <AntMenu.SubMenu title={t("Airline 2")}>
-        <AntMenu.Item onClick={() => scrollTo("offer2-1")}>
-          {t("Airline 2-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("offer2-2")}>
-          {t("Airline 2-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
-      <AntMenu.SubMenu title={t("Airline 3")}>
-        <AntMenu.Item onClick={() => scrollTo("offer3-1")}>
-          {t("Airline 3-1")}
-        </AntMenu.Item>
-        <AntMenu.Item onClick={() => scrollTo("offer3-2")}>
-          {t("Airline 3-2")}
-        </AntMenu.Item>
-      </AntMenu.SubMenu>
     </AntMenu>
   );
 
@@ -273,18 +229,9 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Holiday Offers")}</Span>
         </CustomNavLinkSmall>
 
-        <Dropdown overlay={ourAirlinesPartnersMenu} trigger={["click"]}>
-          <CustomNavLinkSmall>
-            <Span>
-              {t("Our Airline Partners")}{" "}
-              {openDropdown === "ourAirlinePartners" ? (
-                <CaretUpFilled />
-              ) : (
-                <CaretDownFilled />
-              )}
-            </Span>
-          </CustomNavLinkSmall>
-        </Dropdown>
+        <CustomNavLinkSmall as={Link} to="/airlines">
+          <Span>{t("Our Airline Partners")}</Span>
+        </CustomNavLinkSmall>
 
         <CustomNavLinkSmall as={Link} to="/">
           <Span>

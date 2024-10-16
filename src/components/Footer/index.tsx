@@ -70,11 +70,15 @@ const Footer = ({ t }: { t: TFunction }) => {
               </p>
               <EmailOutlinedIcon style={{ color: "#1E515F" }} />
               <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
-                Nxtflights@hello.com
+                <a href="mailto:Nxtflights@hello.com" style={{ color: "#FFF" }}>
+                  Nxtflights@hello.com
+                </a>
               </p>
               <LocalPhoneOutlinedIcon style={{ color: "#1E515F" }} />
               <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
-                +1 222-333-444
+                <a href="tel:+1 222-333-444" style={{ color: "#FFF" }}>
+                  +1 222-333-444
+                </a>
               </p>
             </FooterContainer>
           </Row>

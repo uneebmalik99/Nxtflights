@@ -1,0 +1,49 @@
+.airlinesContainer {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../../../public/assets/airlinesBg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+}
+
+.airlinesPageName {
+  position: absolute;
+  left: 9%;
+  padding: 20px;
+  color: white;
+  font-size: 3rem;
+}
+
+.customAirlinesContainer {
+  padding: 20px;
+}
+
+.customAirlineCardWrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customAirlineCardWrapper:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.customAirlineCard {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.customAirlineLogo {
+  display: block;
+  margin: 0 auto;
+  height: 150px;
+  object-fit: contain;
+  cursor: pointer;
+}
