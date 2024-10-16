@@ -1,0 +1,11 @@
+{
+  "british-airways": {
+    "title": "British Airways Business Class",
+    "description": "Feel safe and secure when travelling with British Airways and take to the skies in comfort with amazing prices on business class flights. With amazing destinations opening up for great prices for your trip you will be packing your bags in no time. Take a look at what British Airways are doing to welcome you back onboard safely and contact us today to book your next trip.",
+    "club_class": "British Airways Club Class",
+    "images": {
+        "1": "../../assets/Airlines/airline_img_1.png",
+        "2": "../../assets/Airlines/airline_img_2.png"
+    }
+  }
+}

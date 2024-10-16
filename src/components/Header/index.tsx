@@ -217,7 +217,7 @@ const Header = ({ t }: { t: TFunction }) => {
           </CustomNavLinkSmall>
         </Dropdown>
 
-        <CustomNavLinkSmall as={Link} to="/">
+        <CustomNavLinkSmall as={Link} to="/business-class-flights">
           <Span>{t("Business Class Flights")}</Span>
         </CustomNavLinkSmall>
 

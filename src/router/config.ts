@@ -43,7 +43,17 @@ const routes = [
   {
     path: ["/airlines"],
     component: "Airlines",
-    chunkName: "airlines ",
+    chunkName: "airlines",
+  },
+  {
+    path: ["/airline/:detail"],
+    component: "AirlineDetail",
+    chunkName: "airlineDetail",
+  },
+  {
+    path: ["/business-class-flights"],
+    component: "BusinessClassFlights",
+    chunkName: "businessClassFlights",
   },
 ];
 
