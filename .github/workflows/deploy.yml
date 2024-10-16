@@ -18,8 +18,11 @@ jobs:
           node-version: "18"
 
       - name: 🔨 Build Project
+        env:
+          REACT_APP_API_URL: "http://backend.nxtflight.com/"
         run: |
           npm install --legacy-peer-deps
+          echo "REACT_APP_API_URL=$REACT_APP_API_URL" >> .env
           CI=false npm run build
 
       - name: 📂 Sync files
