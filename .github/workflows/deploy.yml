@@ -19,7 +19,7 @@ jobs:
 
       - name: 🔨 Build Project
         env:
-          REACT_APP_API_BASE_URL: "http://backend.nxtflight.com/"
+          REACT_APP_API_BASE_URL: "http://backend.nxtflight.com"
         run: |
           npm install --legacy-peer-deps
           echo "REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL" >> .env
