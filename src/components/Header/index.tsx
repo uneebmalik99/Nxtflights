@@ -233,14 +233,14 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Our Airline Partners")}</Span>
         </CustomNavLinkSmall>
 
-        <CustomNavLinkSmall as={Link} to="/">
+        {/* <CustomNavLinkSmall as={Link} to="/">
           <Span>
             <SearchBtn variant={searchBtnVariant}>
               <span style={{ marginRight: "10px" }}>{t("Search")}</span>{" "}
               <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
       </>
     );
   };
