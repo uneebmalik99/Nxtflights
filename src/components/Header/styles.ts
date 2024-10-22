@@ -127,3 +127,48 @@ export const SearchBtn = styled("button")<{ variant?: string }>`
     color: #4062BB;
   `}
 `;
+
+// Mega Menu Styles
+export const MegaMenu = styled.div`
+  display: flex;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.45) 7px 12px 7px;
+`;
+
+interface MenuItemProps {
+  onClick: () => void;
+  children: React.ReactNode; // This is necessary to accept children
+}
+
+export const Menuitem = styled.div<MenuItemProps>`
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+`;
+
+// Styled Link (if needed)
+export const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+// Styled Menu Icon
+export const StyledMenuIcon = styled(MenuOutlined)`
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #1890ff; /* You can adjust the hover color as needed */
+  }
+`;

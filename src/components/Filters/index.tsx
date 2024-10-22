@@ -4,6 +4,7 @@ import "./FlightBookingForm.css";
 import { Button, Card, Col, Row, Spin, notification, Modal } from "antd";
 import axios from "axios";
 import { useState } from "react";
+import { CheckCircleOutlined } from "@mui/icons-material";
 
 function FlightBookingForm({ direction }: FlightBookingFormProps) {
   const initialFormData = {
@@ -253,15 +254,18 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
         </Card>
       </Fade>
       <Modal
-        title="Success"
+        className="custom-modal"
         visible={isModalVisible}
-        onOk={() => setIsModalVisible(false)}
         onCancel={() => setIsModalVisible(false)}
+        footer={null}
+        closeIcon={<span className="close-icon">×</span>}
       >
-        <p>
-          Your request is being submitted successfully. We will inform you
-          shortly.
-        </p>
+        <div className="modal-content">
+          <CheckCircleOutlined className="success-icon" />
+          <p className="success-message">
+            Your request has been submitted successfully.
+          </p>
+        </div>
       </Modal>
     </div>
   );

@@ -17,6 +17,8 @@ import {
   Span,
   Menu,
   SearchBtn,
+  MegaMenu,
+  Menuitem,
 } from "./styles";
 
 const { SubMenu } = AntMenu;
@@ -26,6 +28,12 @@ const Header = ({ t }: { t: TFunction }) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
+  const [openKeys, setOpenKeys] = useState<string[]>([]);
+
+  const handleOpenChange = (keys: string[]) => {
+    setOpenKeys(keys);
+  };
+
   const destinations: { [key: string]: string[] } = {
     Africa: [
       "Cape Town",
@@ -33,6 +41,21 @@ const Header = ({ t }: { t: TFunction }) => {
       "Johannesburg",
       "Port Elizabeth",
       "Zanzibar",
+    ],
+    "Australasia & Pacific": [
+      "Adelaide",
+      "Alice Springs",
+      "Auckland",
+      "Australia",
+      "Brisbane",
+      "Cairns",
+      "Christchurch",
+      "Fiji ",
+      "Melbourne",
+      "New Zealand",
+      "Perth ",
+      "Sydney",
+      "Wellington",
     ],
     Asia: [
       "Bali",
@@ -59,21 +82,6 @@ const Header = ({ t }: { t: TFunction }) => {
       "Thailand",
       "Tokyo",
     ],
-    "Australasia & Pacific": [
-      "Adelaide",
-      "Alice Springs",
-      "Auckland",
-      "Australia",
-      "Brisbane",
-      "Cairns",
-      "Christchurch",
-      "Fiji ",
-      "Melbourne",
-      "New Zealand",
-      "Perth ",
-      "Sydney",
-      "Wellington",
-    ],
     "Caribbean & Mexico": [
       "Antigua",
       "Bahamas",
@@ -96,6 +104,13 @@ const Header = ({ t }: { t: TFunction }) => {
       "Kuwait",
       "Muscat",
       "Riyadh",
+    ],
+    "South & Central America": [
+      "Buenos Aires",
+      "Lima",
+      "Rio de Janeiro",
+      "Santiago",
+      "Sao Paulo",
     ],
     "North America": [
       "Atlanta",
@@ -140,13 +155,6 @@ const Header = ({ t }: { t: TFunction }) => {
       "Washington, D.C.",
       "Winnipeg",
     ],
-    "South & Central America": [
-      "Buenos Aires",
-      "Lima",
-      "Rio de Janeiro",
-      "Santiago",
-      "Sao Paulo",
-    ],
   };
 
   const history = useHistory();
@@ -159,26 +167,31 @@ const Header = ({ t }: { t: TFunction }) => {
     setVisibility(!visible);
   };
 
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-    setVisibility(false);
-  };
-
   const DestinationsMenu = () => (
-    <AntMenu mode="horizontal">
+    // <AntMenu mode="horizontal">
+    //   {Object.entries(destinations).map(([region, cities]) => (
+    //     <SubMenu key={region} title={region}>
+    //       {cities.map((city) => (
+    //         <AntMenu.Item key={city} onClick={() => handleNavigation(city)}>
+    //           {city}
+    //         </AntMenu.Item>
+    //       ))}
+    //     </SubMenu>
+    //   ))}
+    // </AntMenu>
+
+    <MegaMenu>
       {Object.entries(destinations).map(([region, cities]) => (
-        <SubMenu key={region} title={region}>
+        <div key={region}>
+          <h3 style={{ fontSize: 14 }}>{region}</h3>
           {cities.map((city) => (
-            <AntMenu.Item key={city} onClick={() => handleNavigation(city)}>
+            <Menuitem key={city} onClick={() => handleNavigation(city)}>
               {city}
-            </AntMenu.Item>
+            </Menuitem>
           ))}
-        </SubMenu>
+        </div>
       ))}
-    </AntMenu>
+    </MegaMenu>
   );
 
   const MenuItem = () => {
@@ -204,7 +217,12 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Home")}</Span>
         </CustomNavLinkSmall>
 
-        <Dropdown overlay={<DestinationsMenu />} trigger={["click"]}>
+        <Dropdown
+          overlay={<DestinationsMenu />}
+          overlayStyle={{ top: "60px", left: "50px", width: "95%" }}
+          trigger={["hover"]}
+          placement="bottom"
+        >
           <CustomNavLinkSmall>
             <Span>
               {t("Destinations")}{" "}

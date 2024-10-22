@@ -102,6 +102,34 @@ ul li::marker {
   margin-top: 15px;
 }
 
+.custom-modal .ant-modal-header {
+  display: none; /* Hide the default header */
+}
+
+.custom-modal .ant-modal-close {
+  top: 10px; /* Adjust position of the close button */
+  right: 10px;
+}
+
+.modal-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #52c41a; /* Success green color */
+  margin-bottom: 20px;
+}
+
+.success-message {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+
+
 /* For small screens (e.g., mobile devices) */
 @media only screen and (max-width: 768px) {
   .filtersCard {
