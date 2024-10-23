@@ -17,7 +17,7 @@ const Faqs = () => {
         <h1 className={styles.faqsHeading}>Frequently Asked Questions</h1>
       </div>
       <img
-        src="../../assets/faqs_plane_bg.png"
+        src="../../assets/faqs_plane_bg.webp"
         alt=""
         id={styles.faqs_plane_bg}
       />

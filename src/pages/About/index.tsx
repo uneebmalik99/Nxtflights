@@ -27,11 +27,11 @@ const About = () => {
             </p>
             <div className={styles.border_bottom}></div>
           </div>
-          <img src="../../../assets/about_1.png" alt="" />
+          <img src="../../../assets/about_1.webp" alt="" />
         </div>
         <div className={styles.middleRow}>
-          <img src="../../../assets/about_2.png" alt="" id={styles.img_2} />
-          <img src="../../../assets/about_3.png" alt="" />
+          <img src="../../../assets/about_2.webp" alt="" id={styles.img_2} />
+          <img src="../../../assets/about_3.webp" alt="" />
         </div>
         <div className={styles.facts}>
           <div className={styles.facts_desc}>
@@ -72,7 +72,7 @@ const About = () => {
           <Col span={10} className={styles.lastCol}>
             <img
               id={styles.img_shadow}
-              src="../../../assets/about_1.png"
+              src="../../../assets/about_1.webp"
               alt=""
               style={{
                 width: "85%",

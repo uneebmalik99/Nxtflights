@@ -4,47 +4,47 @@ import { PhotoGalleryProps } from "./types";
 
 const photos = [
   {
-    src: "../../assets/image_1.png",
+    src: "../../assets/image_1.webp",
     width: 5,
     height: 2,
   },
   {
-    src: "../../assets/image_2.png",
+    src: "../../assets/image_2.webp",
     width: 1,
     height: 1,
   },
   {
-    src: "../../assets/image_3.png",
+    src: "../../assets/image_3.webp",
     width: 1,
     height: 1,
   },
   {
-    src: "../../assets/image_4.png",
+    src: "../../assets/image_4.webp",
     width: 1,
     height: 1,
   },
   {
-    src: "../../assets/image_5.png",
+    src: "../../assets/image_5.webp",
     width: 1,
     height: 1,
   },
   {
-    src: "../../assets/image_6.png",
+    src: "../../assets/image_6.webp",
     width: 5,
     height: 5,
   },
   {
-    src: "../../assets/image_7.png",
+    src: "../../assets/image_7.webp",
     width: 3,
     height: 4,
   },
   {
-    src: "../../assets/image_8.png",
+    src: "../../assets/image_8.webp",
     width: 1,
     height: 1,
   },
   {
-    src: "../../assets/image_9.png",
+    src: "../../assets/image_9.webp",
     width: 1,
     height: 1,
   },

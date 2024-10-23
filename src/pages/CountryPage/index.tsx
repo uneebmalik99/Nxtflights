@@ -161,7 +161,7 @@ function CountryPage() {
           marginTop: -111,
           position: "relative",
           backgroundSize: "cover",
-          backgroundImage: `url(/../../assets/CountryImages/${location}_country_img.png)`,
+          backgroundImage: `url(/../../assets/CountryImages/${location}_country_img.webp)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",

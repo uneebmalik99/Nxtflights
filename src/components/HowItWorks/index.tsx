@@ -8,19 +8,19 @@ function HowItWorks({ direction }: HowItWorksProps) {
       title: "Book & Relax",
       description:
         "Let each trip be an inspirational journey, each room a peaceful space.",
-      image: "../../assets/Books.png",
+      image: "../../assets/Books.webp",
     },
     {
       title: "Smart Checklist",
       description:
         "Let each trip be an inspirational journey, each room a peaceful space.",
-      image: "../../assets/CheckList.png",
+      image: "../../assets/CheckList.webp",
     },
     {
       title: "Save More",
       description:
         "Let each trip be an inspirational journey, each room a peaceful space.",
-      image: "../../assets/SaveMore.png",
+      image: "../../assets/SaveMore.webp",
     },
   ];
   return (

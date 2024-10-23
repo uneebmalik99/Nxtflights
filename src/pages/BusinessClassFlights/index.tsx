@@ -169,7 +169,7 @@ function BusinessClassFlights() {
           height: "80vh",
           position: "relative",
           backgroundSize: "cover",
-          backgroundImage: `url(/../../assets/Airlines/business_class_bg_img.png)`,
+          backgroundImage: `url(/../../assets/Airlines/business_class_bg_img.webp)`,
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",

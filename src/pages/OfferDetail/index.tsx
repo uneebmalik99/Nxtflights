@@ -17,7 +17,7 @@ interface DestinationData {
 const destinationsData: DestinationData = {
   dubai: {
     description: "5 nights stay (including return ticket)",
-    imageUrl: "../../assets/offer_1.png",
+    imageUrl: "../../assets/offer_1.webp",
     para_1:
       "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
     para_2:
@@ -25,7 +25,7 @@ const destinationsData: DestinationData = {
   },
   singapore: {
     description: "7 night 6 days trip to Singapore",
-    imageUrl: "../../assets/offer_1.png",
+    imageUrl: "../../assets/offer_1.webp",
     para_1:
       "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
     para_2:
@@ -33,7 +33,7 @@ const destinationsData: DestinationData = {
   },
   switzerland: {
     description: "5 nights stay (including return ticket)",
-    imageUrl: "../../assets/offer_1.png",
+    imageUrl: "../../assets/offer_1.webp",
     para_1:
       "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
     para_2:

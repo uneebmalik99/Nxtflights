@@ -6,37 +6,37 @@ function Airlines() {
   const airlines = [
     {
       name: "British Airways",
-      logo: "../../assets/Airlines/british.png",
+      logo: "../../assets/Airlines/british.webp",
       url: "/airline/british-airways",
     },
     {
       name: "Virgin Atlantic",
-      logo: "../../assets/Airlines/virgin.png",
+      logo: "../../assets/Airlines/virgin.webp",
       url: "/airline/virgin-atlantic",
     },
     {
       name: "Etihad Airways",
-      logo: "../../assets/Airlines/etihad.png",
+      logo: "../../assets/Airlines/etihad.webp",
       url: "/airline/etihad-airways",
     },
     {
       name: "Emirates",
-      logo: "../../assets/Airlines/emirates.png",
+      logo: "../../assets/Airlines/emirates.webp",
       url: "/airline/emirates",
     },
     {
       name: "Malaysia Airlines",
-      logo: "../../assets/Airlines/malaysia.png",
+      logo: "../../assets/Airlines/malaysia.webp",
       url: "/airline/malaysia-airlines",
     },
     {
       name: "Air New Zealand",
-      logo: "../../assets/Airlines/new_zealand.png",
+      logo: "../../assets/Airlines/new_zealand.webp",
       url: "/airline/air-new-zealand",
     },
     {
       name: "Singapore Airlines",
-      logo: "../../assets/Airlines/singapore.png",
+      logo: "../../assets/Airlines/singapore.webp",
       url: "/airline/singapore-airlines",
     },
   ];

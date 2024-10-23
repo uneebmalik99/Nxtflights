@@ -28,7 +28,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                 }
               >
                 <img
-                  src="../../assets/cruise.png"
+                  src="../../assets/cruise.webp"
                   alt="Cruising"
                   style={{
                     objectFit: "cover",
@@ -71,7 +71,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                 }
               >
                 <img
-                  src="../../assets/museum.png"
+                  src="../../assets/museum.webp"
                   alt="Museum"
                   style={{ objectFit: "fill" }}
                   width={"100%"}
@@ -113,7 +113,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                 }
               >
                 <img
-                  src="../../assets/beach.png"
+                  src="../../assets/beach.webp"
                   alt="Beach"
                   style={{ objectFit: "fill" }}
                   width={"100%"}
@@ -161,7 +161,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                   }
                 >
                   <img
-                    src="../../assets/hiking.png"
+                    src="../../assets/hiking.webp"
                     alt="Hiking"
                     style={{ objectFit: "cover", borderRadius: "10px" }}
                     width={"100%"}
@@ -200,7 +200,7 @@ function PopularThings({ direction }: PopularThingsProps) {
                   }
                 >
                   <img
-                    src="../../assets/food.png"
+                    src="../../assets/food.webp"
                     alt="Food"
                     style={{ objectFit: "cover", borderRadius: "10px" }}
                     width={"100%"}
@@ -250,7 +250,7 @@ function PopularThings({ direction }: PopularThingsProps) {
               onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
             >
               <img
-                src="../../assets/citytour.png"
+                src="../../assets/citytour.webp"
                 alt="City Tour"
                 style={{
                   objectFit: "cover",

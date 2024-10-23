@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url("../../../public/assets/contact_bg.png");
+  background-image: url("../../../public/assets/contact_bg.webp");
   background-size: cover;
   background-position: center;
   display: flex;

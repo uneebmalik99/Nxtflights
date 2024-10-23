@@ -16,33 +16,33 @@ const cardData = [
     title:
       "Virgin Atlantic \nLaunche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_1.png",
+    imageUrl: "../../../assets/blog_1.webp",
   },
   {
     title: "Airline lounge and paid lounge comparison at heathrow",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_2.png",
+    imageUrl: "../../../assets/blog_2.webp",
   },
   {
     title: "Britis airways first class review",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_3.png",
+    imageUrl: "../../../assets/blog_3.webp",
   },
   {
     title:
       "Virgin Atlantic Launche new upper class retreat suites-A new Era....",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_1.png",
+    imageUrl: "../../../assets/blog_1.webp",
   },
   {
     title: "Airline lounge and paid lounge comparison at heathrow",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_2.png",
+    imageUrl: "../../../assets/blog_2.webp",
   },
   {
     title: "Britis airways first class review",
     description: "August 20, 2022",
-    imageUrl: "../../../assets/blog_3.png",
+    imageUrl: "../../../assets/blog_3.webp",
   },
 ];
 

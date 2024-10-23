@@ -232,7 +232,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 }}
               >
                 <img
-                  src="../../../assets/certificate.png"
+                  src="../../../assets/certificate.webp"
                   width={300}
                   alt="certificate"
                 />

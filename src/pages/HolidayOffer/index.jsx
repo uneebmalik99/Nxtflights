@@ -92,7 +92,7 @@ const HolidayOffers = () => {
                 }}
               >
                 <img
-                  src={`../../assets/${destination.toLowerCase()}-image.png`}
+                  src={`../../assets/${destination.toLowerCase()}-image.webp`}
                   alt={destination}
                   style={{ width: "100%", borderRadius: "10px 10px 0 0" }}
                 />

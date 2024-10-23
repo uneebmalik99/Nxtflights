@@ -59,7 +59,7 @@ function HappeningCities({ direction }: HappeningCitiesProps) {
           alignItems: "center",
         }}
       >
-        <GlobeImage src="../../../assets/cities.png" alt="Happening Cities" />
+        <GlobeImage src="../../../assets/cities.webp" alt="Happening Cities" />
       </Col>
 
       {/* Right Side - Text */}

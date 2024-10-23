@@ -3,42 +3,42 @@
   "destinations": [
     {
       "name": "Paris",
-      "image": "paris.png",
+      "image": "paris.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "New York",
-      "image": "newyork.png",
+      "image": "newyork.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "London",
-      "image": "london.png",
+      "image": "london.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "Turkey",
-      "image": "turkey.png",
+      "image": "turkey.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "Dubai",
-      "image": "dubai.png",
+      "image": "dubai.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "Rome",
-      "image": "rome.png",
+      "image": "rome.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "Switzerland",
-      "image": "switzerland.png",
+      "image": "switzerland.webp",
       "tours": "100+ Tours"
     },
     {
       "name": "Greece",
-      "image": "greece.png",
+      "image": "greece.webp",
       "tours": "100+ Tours"
     }
   ]

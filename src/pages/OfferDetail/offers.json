@@ -1,7 +1,7 @@
 {
   "Dubai": {
     "description": "5 nights stay (including return ticket)",
-    "imageUrl": "../../assets/dubai-image.png",
+    "imageUrl": "../../assets/dubai-image.webp",
     "details": [
       "Luxurious accommodation at a 5-star hotel",
       "Return flights from your nearest airport",
@@ -12,7 +12,7 @@
   },
   "Singapore": {
     "description": "7 night 6 days trip to Singapore",
-    "imageUrl": "../../assets/singapore-image.png",
+    "imageUrl": "../../assets/singapore-image.webp",
     "details": [
       "Comfortable stay in a centrally located hotel",
       "Round-trip airfare",
@@ -23,7 +23,7 @@
   },
   "Switzerland": {
     "description": "5 nights stay (including return ticket)",
-    "imageUrl": "../../assets/switzerland-image.png",
+    "imageUrl": "../../assets/switzerland-image.webp",
     "details": [
       "Cozy accommodation in a charming Swiss chalet",
       "Scenic train rides through the Alps",
