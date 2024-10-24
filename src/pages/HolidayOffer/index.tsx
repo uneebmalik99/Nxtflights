@@ -66,7 +66,7 @@ const HolidayOffers = () => {
                   className="slideImage"
                 />
                 <div className="textOverlay">
-                  <h1 className="heading">Holiday Offers</h1>
+                  <h1 className="headingHoliday">Holiday Offers</h1>
                   <h1 className="title">{slide.title}</h1>
                   <p className="description">{slide.description}</p>
                   <button className="offerBtn">{slide.buttonText}</button>
