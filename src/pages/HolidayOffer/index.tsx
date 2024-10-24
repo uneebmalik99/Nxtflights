@@ -1,6 +1,11 @@
 import { Button, Col, Row } from "antd";
 import { useHistory } from "react-router-dom";
 import "./HolidayOffers.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const HolidayOffers = () => {
   const destinations = [
@@ -12,12 +17,64 @@ const HolidayOffers = () => {
     "Switzerland",
   ];
 
+  // Array of slide data
+  const slides = [
+    {
+      image: "../../../assets/HolidayOffer.webp",
+      title: "Dubai",
+      description:
+        "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
+      buttonText: "View Offer",
+    },
+    {
+      image: "../../../assets/HolidayOffer.webp",
+      title: "Singapore",
+      description:
+        "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
+      buttonText: "View Offer",
+    },
+    {
+      image: "../../../assets/HolidayOffer.webp",
+      title: "Switzerland",
+      description:
+        "From boutique hotels to all inclusive resorts, the team at Just Fly Business have the perfect escape for you… and all at fantastic prices! Our relationship with these properties means that we can offer excellent value, whether it’s room upgrades, in-resort credit, free nights, or simply a great deal.",
+      buttonText: "View Offer",
+    },
+  ];
+
   const history = useHistory();
 
   return (
     <>
       <div className="holidayOfferContainer">
-        <h1 className="pageName">Holiday Offers</h1>
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          // autoplay={{ delay: 3000 }}
+          loop
+          className="slider"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="slideContent">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="slideImage"
+                />
+                <div className="textOverlay">
+                  <h1 className="heading">Holiday Offers</h1>
+                  <h1 className="title">{slide.title}</h1>
+                  <p className="description">{slide.description}</p>
+                  <button className="offerBtn">{slide.buttonText}</button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="filter-wrapper">
         <div className="filter-container">
@@ -113,7 +170,6 @@ const HolidayOffers = () => {
                   >
                     <Button
                       type="default"
-                      variant="outlined"
                       shape="round"
                       className="viewBtn"
                       onClick={() => {

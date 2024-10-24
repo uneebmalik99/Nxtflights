@@ -1,14 +1,47 @@
 .OfferDetailBg {
-  position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url("../../../public/assets/OfferDetail.webp");
   background-size: cover;
   background-position: center;
-  display: flex;
   align-items: center;
   justify-content: flex-start;
   z-index: 1;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+.slideContentDetail {
+  color: white;
+  text-align: left;
+}
+
+.slideImageDetail {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: -1;
+}
+
+.textOverlayDetail {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.headingDetail {
+  font-size: 55px;
+  color: #fff;
 }
 
 .slider-container {
@@ -45,7 +78,7 @@
 }
 
 .header {
-  background-color: #4062BB;
+  background-color: #4062bb;
   color: white;
   padding: 15px 20px;
   font-weight: bold;
@@ -62,17 +95,17 @@
 }
 
 .special-offer .content p {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .special-offer .content h3 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .special-offer .get-price {
   background-color: #fff;
-  color: #4062BB;
-  border: 1px solid #4062BB;
+  color: #4062bb;
+  border: 1px solid #4062bb;
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
@@ -85,9 +118,22 @@
 }
 
 .phone-icon {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .phone-number {
-    font-size: 20px !important;
+  font-size: 20px !important;
+}
+
+
+.destination {
+  font-size: 40px;
+  font-weight: 600;
+  color: #333;
+}
+
+.offer_para {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333;
 }

@@ -1,24 +1,72 @@
 .holidayOfferContainer {
-  position: relative;
   width: 100%;
   height: 80vh;
-  background-image: url("../../../public/assets/HolidayOffer.webp");
   background-size: cover;
-  object-fit: contain;
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  z-index: -1;
-  margin-top: -111px;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
 }
 
-.pageName {
-  position: absolute;
-  left: 12%;
-  padding: 20px;
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+.slideContent {
   color: white;
-  font-size: 3rem;
+  text-align: left;
+}
+
+.slideImage {
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: -1;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.title {
+  font-size: 33px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.description {
+  font-size: 15px;
+  color: #fff;
+  font-weight: 400;
+  width: 45%;
+}
+
+.offerBtn {
+  padding: 10px 20px;
+  background-color: #4062bb;
+  border: none;
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 55px;
+  color: #fff;
 }
 
 .filter-container {

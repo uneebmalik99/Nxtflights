@@ -4,6 +4,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 // Define a type with a string index signature
 interface DestinationData {
   [key: string]: {
@@ -45,6 +51,19 @@ const OfferDetail = () => {
   const { destination } = useParams<{ destination: string }>();
   const destinationLower = destination?.toLowerCase();
 
+  // Array of slide data
+  const slides = [
+    {
+      image: "../../../assets/HolidayOffer.webp",
+    },
+    {
+      image: "../../../assets/HolidayOffer.webp",
+    },
+    {
+      image: "../../../assets/HolidayOffer.webp",
+    },
+  ];
+
   const offer = destinationLower
     ? destinationsData[destinationLower]
     : undefined;
@@ -71,12 +90,35 @@ const OfferDetail = () => {
 
   return (
     <>
-      <div className="OfferDetailBg"></div>
+      <div className="OfferDetailBg">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          className="slider"
+        >
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="slideContentDetail">
+                <img src={slide.image} className="slideImageDetail" />
+                <div className="textOverlayDetail">
+                  <h1 className="headingDetail">
+                    {toSentenceCase(destination)}
+                  </h1>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div style={{ padding: 50 }}>
-        <h2>{toSentenceCase(destination)}</h2>
-        <p>{offer.para_1}</p>
+        <h2 className="destination">{toSentenceCase(destination)}</h2>
+        <p className="offer_para">{offer.para_1}</p>
         <br />
-        <p>{offer.para_2}</p>
+        <p className="offer_para">{offer.para_2}</p>
         <div className="slider-container">
           <Slider {...settings}>
             <div>
