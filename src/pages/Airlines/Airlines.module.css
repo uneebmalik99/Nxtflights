@@ -20,7 +20,22 @@
 }
 
 .customAirlinesContainer {
-  padding: 20px;
+  padding: 40px 20px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 105px 0 105px;
+}
+
+#customHeading {
+  font-size: 40px;
+  color: #000;
 }
 
 .customAirlineCardWrapper {

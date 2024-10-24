@@ -57,6 +57,21 @@ function Airlines() {
       </div>
 
       <div className={styles.customAirlinesContainer}>
+        <div className={styles.textContainer}>
+          <h1 id={styles.customHeading}>Discover Your Favorite Airline</h1>
+          <p style={{ fontSize: "15px" }}>
+            Here are a selection of our most frequently booked airlines. Our
+            prices are highly competitive and we are specialists at last minute
+            business and first class travel, often up-to 50% off the published
+            fare.
+          </p>
+
+          <p style={{ fontSize: "15px", marginTop: 50 }}>
+            Click any airline to discover a taste of your business class
+            experience!
+          </p>
+        </div>
+
         <Row gutter={[16, 16]} justify="center">
           {airlines.map((airline, index) => (
             <Col xs={24} sm={12} md={8} lg={8} key={index}>
