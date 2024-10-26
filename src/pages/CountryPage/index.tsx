@@ -152,6 +152,11 @@ function CountryPage() {
     return <div>Loading...</div>;
   }
 
+  // Check if the image exists, else use a random Picsum image based on the location name
+  const backgroundImage = content.images["background"]
+    ? `/../../assets/CountryImages/${location}_country_img.webp`
+    : `https://picsum.photos/seed/${location}/1920/1080`;
+
   return (
     <>
       <div
@@ -161,7 +166,8 @@ function CountryPage() {
           marginTop: -111,
           position: "relative",
           backgroundSize: "cover",
-          backgroundImage: `url(/../../assets/CountryImages/${location}_country_img.webp)`,
+          // backgroundImage: `url(/../../assets/CountryImages/${location}_country_img.webp)`,
+          backgroundImage: `url(${backgroundImage})`,
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start",
