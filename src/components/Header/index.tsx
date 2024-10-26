@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Row, Col, Drawer, Dropdown, Menu as AntMenu } from "antd";
+import { useRef, useEffect, useState } from "react";
+import { Row, Col, Drawer, Dropdown } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import { CaretDownFilled, CaretUpFilled } from "@ant-design/icons";
+import { CaretDownFilled } from "@ant-design/icons";
 import SearchIcon from "@mui/icons-material/Search";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -20,19 +20,18 @@ import {
   MegaMenu,
   Menuitem,
 } from "./styles";
-
-const { SubMenu } = AntMenu;
+import { Input } from "antd";
+import type { InputRef } from "antd";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const [openKeys, setOpenKeys] = useState<string[]>([]);
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleOpenChange = (keys: string[]) => {
-    setOpenKeys(keys);
-  };
+  // Ref for the antd Input element (note: InputRef is used here)
+  const searchInputRef = useRef<InputRef | null>(null);
 
   const destinations: { [key: string]: string[] } = {
     Africa: [
@@ -160,6 +159,7 @@ const Header = ({ t }: { t: TFunction }) => {
   const history = useHistory();
 
   const handleNavigation = (destination: string) => {
+    setSearchVisible(false); // close the search bar after clicking
     history.push(`/country/${destination.toLowerCase().replace(/\s+/g, "-")}`);
   };
 
@@ -168,18 +168,6 @@ const Header = ({ t }: { t: TFunction }) => {
   };
 
   const DestinationsMenu = () => (
-    // <AntMenu mode="horizontal">
-    //   {Object.entries(destinations).map(([region, cities]) => (
-    //     <SubMenu key={region} title={region}>
-    //       {cities.map((city) => (
-    //         <AntMenu.Item key={city} onClick={() => handleNavigation(city)}>
-    //           {city}
-    //         </AntMenu.Item>
-    //       ))}
-    //     </SubMenu>
-    //   ))}
-    // </AntMenu>
-
     <MegaMenu>
       {Object.entries(destinations).map(([region, cities]) => (
         <div key={region}>
@@ -193,6 +181,47 @@ const Header = ({ t }: { t: TFunction }) => {
       ))}
     </MegaMenu>
   );
+
+  const allCities = Object.values(destinations).flat();
+  const filteredCities = allCities.filter((city) =>
+    city.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Close the dropdown when clicking outside the input/suggestions
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchInputRef.current?.input &&
+        !searchInputRef.current.input.contains(event.target as Node) &&
+        !(event.target as HTMLElement).closest(".autocomplete-suggestions") // ignore clicks inside suggestions
+      ) {
+        setSearchVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Handle input change properly
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value); // Make sure this updates with every keystroke
+  };
+
+  // Open the search bar when clicking the search button and focus on input
+  const toggleSearch = () => {
+    setSearchVisible(true);
+    setSearchQuery(""); // Clear the query when search is toggled
+
+    // Focus on the input field after making it visible
+    setTimeout(() => {
+      searchInputRef.current?.focus(); // Ensure the input gains focus
+    }, 0);
+  };
+
+  console.log(searchQuery, filteredCities);
 
   const MenuItem = () => {
     const Routes = [
@@ -225,12 +254,7 @@ const Header = ({ t }: { t: TFunction }) => {
         >
           <CustomNavLinkSmall>
             <Span>
-              {t("Destinations")}{" "}
-              {openDropdown === "destinations" ? (
-                <CaretUpFilled />
-              ) : (
-                <CaretDownFilled />
-              )}
+              {t("Destinations")} <CaretDownFilled />
             </Span>
           </CustomNavLinkSmall>
         </Dropdown>
@@ -251,14 +275,73 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Our Airline Partners")}</Span>
         </CustomNavLinkSmall>
 
-        {/* <CustomNavLinkSmall as={Link} to="/">
+        {/* Search Button */}
+        <CustomNavLinkSmall onClick={toggleSearch}>
           <Span>
             <SearchBtn variant={searchBtnVariant}>
-              <span style={{ marginRight: "10px" }}>{t("Search")}</span>{" "}
+              <span style={{ marginRight: "10px" }}>{t("Search")}</span>
               <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
-        </CustomNavLinkSmall> */}
+        </CustomNavLinkSmall>
+
+        {/* Full-length Search Input */}
+        {searchVisible && (
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              zIndex: 9999,
+            }}
+          >
+            <Input
+              ref={searchInputRef} // Attach ref using antd's InputRef type
+              value={searchQuery} // Ensure the input value is tied to searchQuery state
+              onChange={handleSearchChange} // Properly handle changes to input
+              placeholder="Search cities..."
+              style={{
+                width: "100%",
+                padding: "10px",
+                fontSize: "16px",
+                boxSizing: "border-box",
+              }}
+              allowClear
+            />
+
+            {/* Autocomplete Suggestions */}
+            {filteredCities.length > 0 && (
+              <div
+                className="autocomplete-suggestions"
+                style={{
+                  background: "white",
+                  maxHeight: "300px",
+                  overflowY: "scroll",
+                  position: "absolute",
+                  width: "100%",
+                  zIndex: 10000,
+                  textAlign: "left",
+                }}
+              >
+                {filteredCities.map((city) => (
+                  <div
+                    key={city}
+                    className="autocomplete-suggestions"
+                    onClick={() => handleNavigation(city)} // Ensure the click navigates first
+                    style={{
+                      padding: "10px",
+                      cursor: "pointer",
+                      borderBottom: "1px solid #ddd",
+                    }}
+                  >
+                    {city}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
       </>
     );
   };
