@@ -55,6 +55,7 @@ const Header = ({ t }: { t: TFunction }) => {
       "Perth ",
       "Sydney",
       "Wellington",
+      "Japan"
     ],
     Asia: [
       "Bali",
@@ -103,6 +104,7 @@ const Header = ({ t }: { t: TFunction }) => {
       "Kuwait",
       "Muscat",
       "Riyadh",
+      "Dubai",
     ],
     "South & Central America": [
       "Buenos Aires",
@@ -148,7 +150,7 @@ const Header = ({ t }: { t: TFunction }) => {
       "San Jose",
       "Seattle",
       "Tampa",
-      "The USA",
+      "USA",
       "Toronto",
       "Vancouver",
       "Washington, D.C.",
