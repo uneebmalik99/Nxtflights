@@ -240,7 +240,11 @@ const Header = ({ t }: { t: TFunction }) => {
       : "other";
     return (
       <>
-        <CustomNavLinkSmall
+
+        <h1 style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignSelf: 'center' }} className="homePageHeading">
+          Coming Soon
+        </h1>
+        {/* <CustomNavLinkSmall
           as={Link}
           to="/"
           className={location.pathname === "/" ? "active" : ""}
@@ -259,9 +263,9 @@ const Header = ({ t }: { t: TFunction }) => {
               {t("Destinations")} <CaretDownFilled />
             </Span>
           </CustomNavLinkSmall>
-        </Dropdown>
+        </Dropdown> */}
 
-        <CustomNavLinkSmall as={Link} to="/business-class-flights">
+        {/* <CustomNavLinkSmall as={Link} to="/business-class-flights">
           <Span>{t("Business Class Flights")}</Span>
         </CustomNavLinkSmall>
 
@@ -275,17 +279,17 @@ const Header = ({ t }: { t: TFunction }) => {
 
         <CustomNavLinkSmall as={Link} to="/airlines">
           <Span>{t("Our Airline Partners")}</Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
 
         {/* Search Button */}
-        <CustomNavLinkSmall onClick={toggleSearch}>
+        {/* <CustomNavLinkSmall onClick={toggleSearch}>
           <Span>
             <SearchBtn variant={searchBtnVariant}>
               <span style={{ marginRight: "10px" }}>{t("Search")}</span>
               <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
 
         {/* Full-length Search Input */}
         {searchVisible && (

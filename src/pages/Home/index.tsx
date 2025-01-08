@@ -20,6 +20,8 @@ const Home = () => {
   return (
     <>
       <div className="homePageBg">
+
+
         <h1 className="homePageHeading">
           Your Ticket To <br /> Explore The World
         </h1>
@@ -28,10 +30,10 @@ const Home = () => {
       <Container>
         <ScrollToTop />
         <FlightBookingForm direction="left" />
-        <TrendingDestinations direction="right" />
-        <AboutUs direction="left" />
+        {/* <TrendingDestinations direction="right" />
+        <AboutUs direction="left" /> */}
       </Container>
-      <SpecialOffers direction="right" />
+      {/* <SpecialOffers direction="right" />
       <Container>
         <BookingSimple direction="left" />
       </Container>
@@ -43,7 +45,7 @@ const Home = () => {
         <PhotoGallery direction="right" />
         <ClientsReview direction="left" />
       </Container>
-      <CertificateBanner direction="right" />
+      <CertificateBanner direction="right" /> */}
     </>
   );
 };
