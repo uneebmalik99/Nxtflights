@@ -82,9 +82,9 @@ ul li::marker {
   margin-bottom: 10px;
 }
 
-.responsive-col {
+/* .responsive-col {
   border-right: 5px dashed gray;
-}
+} */
 
 .leftChildCol {
   height: 350px;
@@ -103,11 +103,13 @@ ul li::marker {
 }
 
 .custom-modal .ant-modal-header {
-  display: none; /* Hide the default header */
+  display: none;
+  /* Hide the default header */
 }
 
 .custom-modal .ant-modal-close {
-  top: 10px; /* Adjust position of the close button */
+  top: 10px;
+  /* Adjust position of the close button */
   right: 10px;
 }
 
@@ -118,7 +120,8 @@ ul li::marker {
 
 .success-icon {
   font-size: 48px;
-  color: #52c41a; /* Success green color */
+  color: #52c41a;
+  /* Success green color */
   margin-bottom: 20px;
 }
 

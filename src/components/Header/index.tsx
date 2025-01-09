@@ -241,9 +241,23 @@ const Header = ({ t }: { t: TFunction }) => {
     return (
       <>
 
-        <h1 style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignSelf: 'center' }} className="homePageHeading">
+
+        {/* <h1 style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignSelf: 'center' }} className="homePageHeading">
           Coming Soon
-        </h1>
+        </h1> */}
+        <div style={{ height: 60 }}>
+          <h1 style={{
+            position: 'absolute',
+            top: '100%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            margin: 0,
+            padding: 0
+          }} className="homePageHeading">
+            Coming Soon
+          </h1>
+        </div>
+
         {/* <CustomNavLinkSmall
           as={Link}
           to="/"
@@ -357,7 +371,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.png" width="110px" height="50px" />
+            {/* <SvgIcon src="logo.png" width="110px" height="50px" /> */}
           </LogoContainer>
           <NotHidden>
             <MenuItem />

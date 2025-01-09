@@ -71,7 +71,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
       <Fade direction={direction} triggerOnce>
         <Card className="filtersCard">
           <Row className="filterParentRow">
-            <Col className="responsive-col" span={16}>
+            <Col className="responsive-col" span={24}>
               <div className="leftHeading">
                 Get Amazing First and Business Class Flight Deals
               </div>
@@ -205,7 +205,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 </Col>
               </Row>
             </Col>
-            <Col
+            {/* <Col
               span={8}
               style={{
                 paddingBlock: 20,
@@ -249,7 +249,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 Just Fly Business takes your privacy very seriously. Please see
                 our privacy policy and terms & conditions here
               </p>
-            </Col>
+            </Col> */}
           </Row>
         </Card>
       </Fade>

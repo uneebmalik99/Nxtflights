@@ -22,10 +22,10 @@ const Home = () => {
       <div className="homePageBg">
 
 
-        <h1 className="homePageHeading">
+        {/* <h1 className="homePageHeading">
           Your Ticket To <br /> Explore The World
-        </h1>
-        <p className="pagePara">Best Flights at cheap rates at your service</p>
+        </h1> */}
+        {/* <p className="pagePara">Best Flights at cheap rates at your service</p> */}
       </div>
       <Container>
         <ScrollToTop />
