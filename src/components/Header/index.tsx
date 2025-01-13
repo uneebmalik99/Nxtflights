@@ -294,14 +294,14 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall> */}
 
         {/* Search Button */}
-        <CustomNavLinkSmall onClick={toggleSearch}>
+        {/* <CustomNavLinkSmall onClick={toggleSearch}>
           <Span>
             <SearchBtn variant={searchBtnVariant}>
               <span style={{ marginRight: "10px" }}>{t("Search")}</span>
               <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
 
         {/* Full-length Search Input */}
         {searchVisible && (
@@ -369,7 +369,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            {/* <SvgIcon src="logo.png" width="110px" height="50px" /> */}
+            <SvgIcon src="AppLogo1.png" width="110px" height="80px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

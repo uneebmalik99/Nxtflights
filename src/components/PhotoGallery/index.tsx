@@ -108,13 +108,16 @@ function PhotoGallery({ direction }: PhotoGalleryProps) {
   return (
     <GalleryContainer>
       <h1>Trending Destinations</h1>
-      <Gallery
-        photos={photos}
-        direction="row"
-        renderImage={renderImage}
-        margin={12}
-        targetRowHeight={300}
-      />
+      <div style={{ marginInline: '20px', alignSelf: 'center', justifyContent: 'center' }}>
+        <Gallery
+          photos={photos}
+          direction="row"
+          renderImage={renderImage}
+          margin={12}
+          targetRowHeight={300}
+        />
+      </div>
+
     </GalleryContainer>
   );
 }

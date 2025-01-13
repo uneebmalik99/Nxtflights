@@ -145,19 +145,25 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                       >
                         <option value="Business">Business</option>
                         <option value="Economy">Economy</option>
-                        <option value="First Class">First Class</option>
                       </select>
                     </div>
                     <div className="inputDiv" style={{ width: "50%" }}>
-                      <label>Class</label>
+                      <label>Passenger</label>
                       <select
                         name="travelClass2"
                         value={formData.travelClass2}
                         onChange={handleChange}
                       >
-                        <option value="Business">Business</option>
-                        <option value="Economy">Economy</option>
-                        <option value="First Class">First Class</option>
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                        <option value="5">5 Passengers</option>
+                        <option value="6">6 Passengers</option>
+                        <option value="7">7 Passengers</option>
+                        <option value="8">8 Passengers</option>
+                        <option value="9">9 Passengers</option>
+                        <option value="10">10 Passengers</option>
                       </select>
                     </div>
                   </div>
@@ -198,10 +204,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
               </Row>
             </Col>
             <Col span={8} id="rightCol">
-              <div className="rightContent">
-                {/* <p style={{ fontWeight: "600", color: "#4062BB" }}>
-                  Why Work with Us?
-                </p> */}
+              {/* <div className="rightContent">
                 <ul
                   style={{
                     fontSize: 16,
@@ -263,7 +266,80 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 >
                   Please see our privacy policy and terms & conditions here.
                 </p>
+              </div> */}
+
+              <div className="rightContent">
+                <ul
+                  style={{
+                    fontSize: 16,
+                    fontWeight: "normal",
+                    color: "#000",
+                    marginTop: "2rem",
+                    lineHeight: "32px", // Increased line height for more spacing between list items
+                    letterSpacing: "0.5px",
+                    paddingTop: "10px",
+                    listStyleType: "disc", // Ensures bullet points are visible
+                    paddingLeft: "20px" // Adds proper indentation for list items
+                  }}
+                >
+                  <li>Call our Uk Office 7 days a week between 9:00 AM - 8:00 PM</li>
+                  <li>Experienced, friendly staff</li>
+                  <li>Easy booking process</li>
+                </ul>
+
+                <div
+                  className="subscribeSection"
+                  style={{
+                    marginTop: "3rem", // Added more space before subscribe section
+                    marginBottom: "2rem" // Added space after subscribe section
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      lineHeight: "19.5px",
+                      fontWeight: "400",
+                      color: "rgba(0, 0, 1)",
+                      textAlign: "center",
+                      marginBottom: "1.5rem" // Added space between text and button
+                    }}
+                  >
+                    Subscribe here for our newsletter
+                  </p>
+                  <Button
+                    style={{
+                      backgroundColor: "#3F61BA",
+                      width: "239px",
+                      height: "43px",
+                      display: "block", // Changed to block for proper centering
+                      margin: "0 auto" // Centers the button
+                    }}
+                    type="primary"
+                    shape="round"
+                    className="subscribeButton"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+
+                <p
+                  style={{
+                    borderTop: "1px dotted black",
+                    marginTop: "2.5rem",
+                    paddingTop: "1.5rem",
+                    paddingBottom: "1.5rem",
+                    fontSize: 14,
+                    color: "#000000",
+                    lineHeight: "17.07px",
+                    letterSpacing: "1px", // Reduced letter spacing to match image
+                    fontWeight: "400",
+                    textAlign: "left" // Ensures left alignment
+                  }}
+                >
+                  Please see our privacy policy and terms & conditions here
+                </p>
               </div>
+
             </Col>
           </Row>
         </Card>

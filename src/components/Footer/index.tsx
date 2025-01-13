@@ -31,16 +31,15 @@ const Footer = ({ t }: { t: TFunction }) => {
                 />
               </LogoContainer>
               <Para>
-                Forem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                eu turpis molestie, dictum est a, mattis tellus. Sed dignissim,
+                NXT Flights offering comprehensive travel solutions with competitive pricing across 80+ airlines and 500+ suppliers worldwide. Providing 24/7 customer support, personalized itineraries, and seamless booking experiences for flights to over 5000 cities in 200+ countries
               </Para>
             </Col>
             <Col lg={7} md={4} sm={24} xs={24}>
-              <Title>{t("Service")}</Title>
+              {/* <Title>{t("Service")}</Title>
               <Large to="/">{t("Business Flights")}</Large>
               <Large to="/">{t("Holiday Offers")}</Large>
               <Large to="/">{t("Airline Partners")}</Large>
-              <Large to="/">{t("Travel Blog")}</Large>
+              <Large to="/">{t("Travel Blog")}</Large> */}
             </Col>
             <Col lg={7} md={4} sm={24} xs={24}>
               <Title>{t("Quick Links")}</Title>

@@ -9,7 +9,6 @@ const TopSectionWrapper = styled.div`
   padding: 20px;
   .heading {
     align-self: flex-start;
-    /* Aligns the heading to the left */
     margin-bottom: 20px;
     font-size: 24px;
     font-weight: bold;
@@ -24,14 +23,14 @@ const TopSection = styled.section`
 
   .image-container {
     flex: 1;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     img {
       width: 100%;
-      height: 230px;
+      height: 250px;
       object-fit: cover;
     }
   }
@@ -49,7 +48,8 @@ const BottomSection = styled.section`
 
       display: flex !important;
       justify-content: center;
-      gap: 10px;
+      gap: 5px;
+      margin-top: 10px;
 
       li {
         margin: 0;
@@ -92,6 +92,7 @@ const BottomSection = styled.section`
       img {
         width: 153px;
         height: 99px;
+       margin-bottom : 10px;
         object-fit: contain;
         align-self: center;
       }
@@ -197,10 +198,10 @@ const Airline: React.FC = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginBlock: '20px' }}>
       {/* Top Section with Heading */}
       <TopSectionWrapper>
-        <h2 className="heading">Partner Airlines</h2>
+        <h1 className="heading">Partner Airlines</h1>
         <TopSection>
           {topImages.map((image, index) => (
             <div key={index} className="image-container">
