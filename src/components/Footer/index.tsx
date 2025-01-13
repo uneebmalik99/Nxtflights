@@ -63,20 +63,20 @@ const Footer = ({ t }: { t: TFunction }) => {
           >
             <Title>Copyright NXTFlights</Title>
             <FooterContainer>
-              <FmdGoodOutlined style={{ color: "#1E515F" }} />
-              <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
-                8819 Ohio St. South Gate, CA 90280
+              <FmdGoodOutlined style={{ color: "#4062BB" }} />
+              <p style={{ fontSize: 10, color: "#4062BB", marginTop: "8px" }}>
+                .abcdsssss .abcdsssss .abcdsssss
               </p>
               <EmailOutlinedIcon style={{ color: "#1E515F" }} />
               <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
-                <a href="mailto:Nxtflights@hello.com" style={{ color: "#FFF" }}>
-                  Nxtflights@hello.com
+                <a href="mailto:Admin@nxtflight.com" style={{ color: "#FFF" }}>
+                  Admin@nxtflight.com
                 </a>
               </p>
               <LocalPhoneOutlinedIcon style={{ color: "#1E515F" }} />
               <p style={{ fontSize: 10, color: "#fff", marginTop: "8px" }}>
-                <a href="tel:+1 222-333-444" style={{ color: "#FFF" }}>
-                  +1 222-333-444
+                <a href="tel:+447575888810" style={{ color: "#FFF" }}>
+                  +44 7575 888810
                 </a>
               </p>
             </FooterContainer>

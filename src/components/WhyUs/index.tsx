@@ -40,8 +40,8 @@ function WhyUs({ direction }: WhyUsProps) {
       }}
       className="why-us-container"
     >
-      <div style={{ marginTop: 30 }} className="heading">
-        <h1 id="how_h1">Why Choose Us</h1>
+      <div style={{ marginTop: 30, justifyContent: 'center' }} className="heading">
+        <h1 style={{ alignSelf: 'center' }} id="how_h1">Why Choose Us</h1>
       </div>
       <div className="containers">
         <Row gutter={[30, 30]} justify="center">

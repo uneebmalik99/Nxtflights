@@ -24,8 +24,8 @@ function HowItWorks({ direction }: HowItWorksProps) {
   ];
   return (
     <>
-      <div style={{ marginTop: 30 }} className="heading">
-        <h1 id="how_h1">How It Works</h1>
+      <div style={{ marginTop: 30, justifyContent: 'center' }} className="heading">
+        <h1 style={{ justifyContent: 'center', alignSelf: 'center', textAlign: 'center' }} id="how_h1">How It Works</h1>
       </div>
       <div className="container">
         <Row gutter={[50, 50]}>

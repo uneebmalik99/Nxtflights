@@ -64,9 +64,9 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
         <Card className="filtersCard">
           <Row className="filterParentRow">
             <Col className="responsive-col" span={16}>
-              <div className="leftHeading">
+              {/* <div className="leftHeading">
                 Cheap First and Business Class Flights to Dubai
-              </div>
+              </div> */}
               <Row className="leftChildRow">
                 <Col span={12} className="leftChildCol">
                   <div className="inputDiv">

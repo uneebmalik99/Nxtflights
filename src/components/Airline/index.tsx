@@ -37,65 +37,32 @@ const TopSection = styled.section`
 `;
 
 const BottomSection = styled.section`
-  /* padding: 10px; */
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
-  .logo-carousel {
-    position: relative;
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 150px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 
-    .slick-dots {
-      position: absolute;
-
-      display: flex !important;
-      justify-content: center;
-      gap: 5px;
-      margin-top: 10px;
-
-      li {
-        margin: 0;
-
-        button {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #ccc;
-          border: none;
-          transition: background 0.3s;
-        }
-
-        &.slick-active button {
-          background: #1890ff;
-        }
-      }
+    &:hover {
+      transform: scale(1.05);
     }
 
-    .slick-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-    }
-
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100px;
-      height: 120px;
-      border: 1px solid #e6e6e6;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-      cursor: pointer;
-      margin-bottom: 10px;
-
-      img {
-        width: 153px;
-        height: 99px;
-       margin-bottom : 10px;
-        object-fit: contain;
-        align-self: center;
-      }
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
     }
   }
 `;
@@ -117,21 +84,7 @@ const Airline: React.FC = () => {
   ];
 
   const airlineLogos = [
-    {
-      logo: "https://s3-alpha-sig.figma.com/img/61dc/cbac/e3fe25ec55e73b592cd5ffeea4660fe6?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kNIlDsS7xpAvlCretGGEhQmFXmxExxeFR3TKIdbeM6TCaTrhbV0nqt3piDBj30Usp4B~PbWGXsRAxBGpo13b~qNkiRwOojGoXy95GzaOVbKhPydE7asERAnSyrHBfpLYZ1ZjYWJuP6cf1hWLVlP0DB~R5RChNefgEx3JvyShmz0XGl0gayYQJAIXYkvAeLhqAoGQx4YixXaTFWmB7JPrBbtOgP1lpDibEvs~MWHY9Fhy7OhF09TwhVdOz~pFiy7kvjsULfgBngIrkxKJylvQuAxgA-3KZoWcWJcjFKJ~r97o1jk8igofHaDeTzOkCZg2y8lQv0-jj6U0jU8-r8pCjg__",
-      name: "British Airways",
-      url: "#",
-    },
-    {
-      logo: "https://s3-alpha-sig.figma.com/img/a3f1/ec8b/291e2046433bc8596404a940c5ba3c35?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b0pVGQUy~DC4A1X5ka60IGKg~8ZTcMNt-1-cEvILYgNBKGWXxl7vWf1b04zZYwChUbVXHaJnvB0QvKl8SDRCP5vfyI2FWH1KtMMtd2wpV3pDlLBfYjja2VMwDD8PFteikizg6nqSvrqpm0j3nNy2lTSQKj3GgpQEtkj24EP7xnlfyfMrWVqAM6n-wgH0s94yIHmBO0Tg5OBtZ9Y-1uA7cZ3wrf0xlPVy~7nNurg5jPi7KwW8ekBnG7qfh1B8tnOrrG~Nw6gISjYuKfyerDfi31QZFYW83RFq0HhF9tq4sQykLmIMKP9fq4vgZTIFj9GXQV0gw7zPXkVPXowfCX7MIQ__",
-      name: "Virgin Atlantic",
-      url: "#",
-    },
-    {
-      logo: "https://s3-alpha-sig.figma.com/img/3eca/4a9e/bcca2c3b8b9a57c29af8bbd9756c1c42?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fCH36rgDdmUye54jkSJxD4eOKqYV4f4jknd9shRgq27esvSBwdNDQB3og1PtUTRYgMpysYxvlKL-6AQFXefd4paEi4siHcn4hjnAPodLhKu455Yvl7B85fTSDrk55CnwlLaj1Fg9WgehWl1858zerd9WwSyhIMQlVzIuazAqtEcacN9fsohsoLMqKzdP1WygaKpv2yTVxnxC4HdeaHfKsiuYKnIAdM1lPdAf5CGA9DmYmm-mHU9xl9w4fP-Ws2949U0JuCybkDG5tvawnccEiGBOtszG1aFEz3gFPEqa42ENMCEhr5i-Pq0MInerH8nuU8ZVgsIxS0Vng~0TGd0mhA__",
-      name: "American Airlines",
-      url: "#",
-    },
+
     {
       logo: "https://s3-alpha-sig.figma.com/img/1099/464a/77cdf464fa03f030798ea35aca7f7337?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=aPUwvSOZRBJ4LEgT73m8ejJarItDwALoB-qWwxCmX218pUs6-d9Vjy-uY44g7VNh0h13XQQkYFYeWO6LGQRikjBY9S6M9~TUxw5IA2LXTllUGX3r5m0frsPq6FoTJSpsl7VSaqZbywZ~abud~MqLWxIo3fiOQM6uwbR2iZG4dxEy9MRq3Mmk3OjQHEuZ7Nx5tKX1YqPSnPKsqvEJ0-HWFtVPM4w8mYgEpcuL9UXoLL9d83IV3wmNT4GZ3KL6sMPJZzVXd-dXgN~pkhg3jWyeHyLbijS3VYSgzEmRu8vArijzn6OjWXmgwvyoR~~A81vn6B7btoUGNlSECjPlY-Hciw__",
       name: "Emirates",
@@ -201,7 +154,7 @@ const Airline: React.FC = () => {
     <div style={{ marginBlock: '20px' }}>
       {/* Top Section with Heading */}
       <TopSectionWrapper>
-        <h1 className="heading">Partner Airlines</h1>
+        <h1 style={{ alignSelf: 'center', fontSize: 28 }} className="heading">Partner Airlines</h1>
         <TopSection>
           {topImages.map((image, index) => (
             <div key={index} className="image-container">
@@ -213,17 +166,16 @@ const Airline: React.FC = () => {
 
       {/* Bottom Section */}
       <BottomSection>
-        <Carousel {...carouselSettings} className="logo-carousel">
-          {airlineLogos.map((airline, index) => (
-            <div
-              key={index}
-              className="logo-container"
-              onClick={() => handleAirlineClick(airline.url)}
-            >
-              <img src={airline.logo} alt={airline.name} />
-            </div>
-          ))}
-        </Carousel>
+        {airlineLogos.slice(0, 6).map((airline, index) => (
+          <div
+            key={index}
+            className="logo-container"
+            onClick={() => handleAirlineClick(airline.url)}
+          >
+            <img src={airline.logo} alt={airline.name} />
+          </div>
+        ))}
+
       </BottomSection>
     </div>
   );

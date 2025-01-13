@@ -2,6 +2,7 @@ import Gallery from "react-photo-gallery";
 import "./PhotoGallery.css";
 import { PhotoGalleryProps } from "./types";
 import styled from "styled-components";
+import TrendingDestinations from "./trendingdestination";
 const GalleryContainer = styled.div`
   max-width: 1400px;
   margin: 100px auto 0;
@@ -106,9 +107,10 @@ function renderImage({ index, photo }: any) {
 
 function PhotoGallery({ direction }: PhotoGalleryProps) {
   return (
+
     <GalleryContainer>
-      <h1>Trending Destinations</h1>
-      <div style={{ marginInline: '20px', alignSelf: 'center', justifyContent: 'center' }}>
+      <h1 style={{ alignSelf: 'center', justifyContent: 'center', textAlign: 'center' }}>Trending Destinations</h1>
+      {/* <div style={{ marginInline: '20px', alignSelf: 'center', justifyContent: 'center' }}>
         <Gallery
           photos={photos}
           direction="row"
@@ -116,7 +118,9 @@ function PhotoGallery({ direction }: PhotoGalleryProps) {
           margin={12}
           targetRowHeight={300}
         />
-      </div>
+      </div> */}
+
+      <TrendingDestinations />
 
     </GalleryContainer>
   );
