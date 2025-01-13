@@ -242,10 +242,8 @@ const Header = ({ t }: { t: TFunction }) => {
       <>
 
 
-        {/* <h1 style={{ position: 'absolute', display: 'flex', justifyContent: 'center', alignSelf: 'center' }} className="homePageHeading">
-          Coming Soon
-        </h1> */}
-        <div style={{ height: 60 }}>
+
+        {/* <div style={{ height: 60 }}>
           <h1 style={{
             position: 'absolute',
             top: '100%',
@@ -256,7 +254,7 @@ const Header = ({ t }: { t: TFunction }) => {
           }} className="homePageHeading">
             Coming Soon
           </h1>
-        </div>
+        </div> */}
 
         {/* <CustomNavLinkSmall
           as={Link}
@@ -277,9 +275,9 @@ const Header = ({ t }: { t: TFunction }) => {
               {t("Destinations")} <CaretDownFilled />
             </Span>
           </CustomNavLinkSmall>
-        </Dropdown> */}
+        </Dropdown>
 
-        {/* <CustomNavLinkSmall as={Link} to="/business-class-flights">
+        <CustomNavLinkSmall as={Link} to="/business-class-flights">
           <Span>{t("Business Class Flights")}</Span>
         </CustomNavLinkSmall>
 
@@ -296,14 +294,14 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall> */}
 
         {/* Search Button */}
-        {/* <CustomNavLinkSmall onClick={toggleSearch}>
+        <CustomNavLinkSmall onClick={toggleSearch}>
           <Span>
             <SearchBtn variant={searchBtnVariant}>
               <span style={{ marginRight: "10px" }}>{t("Search")}</span>
               <SearchIcon fontSize="small" />
             </SearchBtn>
           </Span>
-        </CustomNavLinkSmall> */}
+        </CustomNavLinkSmall>
 
         {/* Full-length Search Input */}
         {searchVisible && (

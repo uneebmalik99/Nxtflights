@@ -7,25 +7,25 @@ function HowItWorks({ direction }: HowItWorksProps) {
     {
       title: "Book & Relax",
       description:
-        "Let each trip be an inspirational journey, each room a peaceful space.",
-      image: "../../assets/Books.webp",
+        "Fill in the Inquiry Form or give us a call",
+      image: "../../assets/SaveMore.webp",
     },
     {
       title: "Smart Checklist",
       description:
-        "Let each trip be an inspirational journey, each room a peaceful space.",
+        "Our travel consultants will cater to your requirements",
       image: "../../assets/CheckList.webp",
     },
     {
       title: "Save More",
       description:
-        "Let each trip be an inspirational journey, each room a peaceful space.",
-      image: "../../assets/SaveMore.webp",
+        "Instant booking once you happy to go ahead",
+      image: "../../assets/Books.webp",
     },
   ];
   return (
     <>
-      <div className="heading">
+      <div style={{ marginTop: 30, }} className="heading">
         <h1 id="how_h1">How It Works</h1>
       </div>
       <div className="container">
@@ -42,7 +42,7 @@ function HowItWorks({ direction }: HowItWorksProps) {
                     className="card-image"
                   />
                   <div className="card-text">
-                    <h3>{card.title}</h3>
+                    {/* <h3>{card.title}</h3> */}
                     <p>{card.description}</p>
                   </div>
                 </div>

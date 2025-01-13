@@ -73,7 +73,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
           <Row className="filterParentRow">
             <Col className="responsive-col" span={24}>
               <div className="leftHeading">
-                Get Amazing First and Business Class Flight Deals
+                Cheap First and Business Class Flights to Dubai
               </div>
               <Row className="leftChildRow">
                 <Col span={12} className="leftChildCol">
