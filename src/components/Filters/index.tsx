@@ -35,28 +35,20 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
   };
 
   const handleSubmit = async () => {
-    // Start loading
     setLoading(true);
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_API_BASE_URL}/flight-request`,
         formData
       );
-      // Stop loading
       setLoading(false);
-      // Show the modal on success
       setIsModalVisible(true);
-
-      // Show the notification on success
       notification.success({
         message: "Success",
         description: "Email sent successfully.",
       });
-
-      // Clear the form data on success
       setFormData(initialFormData);
     } catch (error) {
-      // Stop loading
       setLoading(false);
       console.error("Error sending email:", error);
       notification.error({
@@ -71,7 +63,7 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
       <Fade direction={direction} triggerOnce>
         <Card className="filtersCard">
           <Row className="filterParentRow">
-            <Col className="responsive-col" span={24}>
+            <Col className="responsive-col" span={16}>
               <div className="leftHeading">
                 Cheap First and Business Class Flights to Dubai
               </div>
@@ -205,51 +197,74 @@ function FlightBookingForm({ direction }: FlightBookingFormProps) {
                 </Col>
               </Row>
             </Col>
-            {/* <Col
-              span={8}
-              style={{
-                paddingBlock: 20,
-                paddingInline: 35,
-              }}
-              id="rightCol"
-            >
-              <p style={{ fontWeight: "600", color: "#4062BB" }}>
-                Why Work with Us?
-              </p>
-              <ul style={{ fontSize: 16, fontWeight: "normal" }}>
-                <li>
-                  Best prices for flights,
-                  <br /> hotels & car
-                </li>
-                <li>Experienced, friendly staff</li>
-                <li>Easy booking process</li>
-              </ul>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  marginTop: "35%",
-                }}
-              >
-                <img
-                  src="../../../assets/certificate.webp"
-                  width={300}
-                  alt="certificate"
-                />
+            <Col span={8} id="rightCol">
+              <div className="rightContent">
+                {/* <p style={{ fontWeight: "600", color: "#4062BB" }}>
+                  Why Work with Us?
+                </p> */}
+                <ul
+                  style={{
+                    fontSize: 16,
+                    fontWeight: "normal",
+                    color: "#000",
+                    marginTop: "3rem",
+                    lineHeight: "25px",
+                    letterSpacing: "0.5px",
+                    paddingTop: "10px",
+                  }}
+                >
+                  <li>
+                    Call our Uk Office 7 days a week between 9:00 AM - 8:00 PM
+                  </li>
+                  <li>Experienced, friendly staff</li>
+                  <li>Easy booking process</li>
+                </ul>
+                <div className="subscribeSection">
+                  <p
+                    style={{
+                      fontSize: "16px",
+                      lineHeight: "19.5px",
+                      fontWeight: "400",
+                      color: "rgba(0, 0, 1)",
+                      textAlign: "left",
+                      alignSelf: "center",
+                      marginLeft: "15px",
+                    }}
+                  >
+                    Subscribe here for our newsletter
+                  </p>
+                  <Button
+                    style={{
+                      backgroundColor: "#3F61BA",
+                      width: "239px",
+                      height: "43px",
+                      marginLeft: "5rem",
+                    }}
+                    type="primary"
+                    shape="round"
+                    className="subscribeButton"
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+                <p
+                  style={{
+                    borderTop: "1px dotted black",
+                    marginTop: 20,
+                    paddingTop: 10,
+                    paddingBottom: "10px",
+                    fontSize: 14,
+                    color: "#000000",
+                    lineHeight: "17.07px",
+                    letterSpacing: "3px",
+                    fontWeight: "400",
+                    gap: "10px",
+                  }}
+                >
+                  Please see our privacy policy and terms & conditions here.
+                </p>
               </div>
-              <p
-                style={{
-                  borderTop: "1px dotted black",
-                  marginTop: 10,
-                  paddingTop: 10,
-                  fontSize: 15,
-                  color: "black",
-                }}
-              >
-                Just Fly Business takes your privacy very seriously. Please see
-                our privacy policy and terms & conditions here
-              </p>
-            </Col> */}
+            </Col>
           </Row>
         </Card>
       </Fade>

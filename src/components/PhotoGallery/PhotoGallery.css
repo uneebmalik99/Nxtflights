@@ -1,7 +1,7 @@
 .custom-photo {
   padding: 8px;
-  object-fit: cover;
-  border-radius: 20px;
+  object-fit: contain;
+  border-radius: 20px !important;
 }
 
 #photo_h1 {
